@@ -2,13 +2,19 @@
   "alunos": [
     {
       "id": 1,
-      "nome": "Ian",
-      "telefone": "111",
-      "email": "a@gmail.com",
-      "cpf": "1245",
-      "descricaoPerfil": "ola",
-      "rendaPercapita": 2.34,
-      "senha": "123"
+      "nome": "Ian Caminhas",
+      "telefone": "(31) 975778166",
+      "email": "an@gmail.com",
+      "dataNascimento": "1994-09-25",
+      "cpf": "12799404685",
+      "descricaoPerfil": "Engenharia de software",
+      "rendaPerCapita": 600.0,
+      "senha": "123",
+      "rua": "Rua x",
+      "bairro": "bairro beta",
+      "numeroPropriedade": 34,
+      "complemento": "perto da esquina",
+      "logradouro": "qqq"
     }
   ]
 }

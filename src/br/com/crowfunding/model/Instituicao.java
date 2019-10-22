@@ -12,26 +12,19 @@ public class Instituicao {
 	private String conta;
 	private String agencia;
 	private String senha;
-
+	private String rua;
+	private String bairro;
+	private Integer numeroPropriedade;
+	private String complemento;
+	private String logradouro;
+	
 	public Instituicao(String email, String senha) {
 		
 		this.email = email;
 		this.senha = senha;
 	}
 
-	public Instituicao(String nome, String cnpj, String telefone, String email, String responsavel, String descricao,
-			String conta, String agencia, String senha) {
-		this.nome = nome;
-		this.cnpj = cnpj;
-		this.telefone = telefone;
-		this.email = email;
-		this.responsavel = responsavel;
-		this.descricao = descricao;
-		this.conta = conta;
-		this.agencia = agencia;
-		this.senha = senha;
-	}
-
+	
 	
 	public Integer getId() {
 		return id;
@@ -112,5 +105,62 @@ public class Instituicao {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+
+
+	public String getRua() {
+		return rua;
+	}
+
+
+
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+
+
+
+	public String getBairro() {
+		return bairro;
+	}
+
+
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+
+
+	public Integer getNumeroPropriedade() {
+		return numeroPropriedade;
+	}
+
+
+
+	public void setNumeroPropriedade(Integer numeroPropriedade) {
+		this.numeroPropriedade = numeroPropriedade;
+	}
+
+
+
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+	
+	
 
 }

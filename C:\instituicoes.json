@@ -2,10 +2,37 @@
   "instituicoes": [
     {
       "id": 1,
-      "nome": "Ian",
-      "telefone": "111",
+      "nome": "Escola da arte",
+      "cnpj": "121212121212",
+      "telefone": "11212131",
       "email": "a@gmail.com",
-      "senha": "123"
+      "responsavel": "Neymar",
+      "descricao": "PSG",
+      "conta": "1111",
+      "agencia": "23444",
+      "senha": "123",
+      "rua": "Rua x",
+      "bairro": "bairro beta",
+      "numeroPropriedade": 34,
+      "complemento": "perto da esquina",
+      "logradouro": "qqq"
+    },
+    {
+      "id": 2,
+      "nome": "Escola da arte",
+      "cnpj": "121212121212",
+      "telefone": "11212131",
+      "email": "a@gmail.com",
+      "responsavel": "Neymar",
+      "descricao": "PSG",
+      "conta": "1111",
+      "agencia": "23444",
+      "senha": "123",
+      "rua": "Rua x",
+      "bairro": "bairro beta",
+      "numeroPropriedade": 34,
+      "complemento": "perto da esquina",
+      "logradouro": "qqq"
     }
   ]
 }
