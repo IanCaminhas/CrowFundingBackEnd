@@ -1,0 +1,14 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Ian",
+      "telefone": "111",
+      "email": "a@gmail.com",
+      "cpf": "1245",
+      "descricaoPerfil": "ola",
+      "rendaPercapita": 2.34,
+      "senha": "123"
+    }
+  ]
+}
