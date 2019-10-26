@@ -1,6 +1,7 @@
 package br.com.crowfunding.server;
 
 import java.io.IOException;
+
 import java.net.URI;
 
 import org.glassfish.grizzly.http.server.HttpServer;
@@ -20,6 +21,9 @@ public class Server {
 
 	public static HttpServer StartServer() {
 		ResourceConfig config = new ResourceConfig().packages("br.com.crowfunding");
+		CORSFilter corsFilter = new CORSFilter();
+		config.register(corsFilter);
+
 		URI uri = URI.create("http://localhost:8080/");
 		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(uri, config);
 		return server;

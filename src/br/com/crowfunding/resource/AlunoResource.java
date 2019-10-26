@@ -13,6 +13,8 @@ import com.google.gson.GsonBuilder;
 import br.com.crowfunding.dao.AlunoDao;
 import br.com.crowfunding.model.Aluno;
 
+//https://stackoverflow.com/questions/28065963/how-to-handle-cors-using-jax-rs-with-jersey
+
 @Path("alunos")
 public class AlunoResource {
 

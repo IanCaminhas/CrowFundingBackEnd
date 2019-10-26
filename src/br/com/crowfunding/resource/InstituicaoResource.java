@@ -3,8 +3,10 @@ package br.com.crowfunding.resource;
 import java.net.URI;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -20,12 +22,19 @@ public class InstituicaoResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response adiciona(String conteudo) {
+		
+		
+		
 		Instituicao instituicao = new GsonBuilder().setPrettyPrinting().create().fromJson(conteudo, Instituicao.class);
+		
 		new InstituicaoDao().adiciona(instituicao);
 		URI uri = URI.create("instituicoes/");
 		return Response.created(uri).build();
-
-	}
+		
+		}
+	
+	
+	
 	
 		
 }

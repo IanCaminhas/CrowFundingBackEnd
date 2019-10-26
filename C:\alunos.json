@@ -15,6 +15,21 @@
       "numeroPropriedade": 34,
       "complemento": "perto da esquina",
       "logradouro": "qqq"
+    },
+    {
+      "id": 2,
+      "nome": "Tiago",
+      "telefone": "(31) 975778166",
+      "email": "an@gmail.com",
+      "dataNascimento": "1994-09-25",
+      "cpf": "12799404685",
+      "descricaoPerfil": "Engenharia de software",
+      "rendaPerCapita": 600.0,
+      "senha": "123",
+      "rua": "Rua x",
+      "bairro": "bairro beta",
+      "complemento": "perto da esquina",
+      "logradouro": "qqq"
     }
   ]
 }

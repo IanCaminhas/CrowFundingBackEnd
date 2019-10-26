@@ -160,6 +160,17 @@ public class Instituicao {
 	public void setLogradouro(String logradouro) {
 		this.logradouro = logradouro;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Instituicao [id=" + id + ", nome=" + nome + ", cnpj=" + cnpj + ", telefone=" + telefone + ", email="
+				+ email + ", responsavel=" + responsavel + ", descricao=" + descricao + ", conta=" + conta
+				+ ", agencia=" + agencia + ", senha=" + senha + ", rua=" + rua + ", bairro=" + bairro
+				+ ", numeroPropriedade=" + numeroPropriedade + ", complemento=" + complemento + ", logradouro="
+				+ logradouro + "]";
+	}
 	
 	
 
