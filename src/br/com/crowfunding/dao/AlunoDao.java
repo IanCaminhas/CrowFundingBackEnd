@@ -21,7 +21,8 @@ public class AlunoDao {
 		this.repository = new ArquivoRepository(Arquivo.ALUNO);
 	}
 
-	public void adiciona(Aluno aluno) {
+	public Aluno adiciona(Aluno aluno) {
+
 		Map<String, ArrayList<Aluno>> matriculasMap = this.getAlunos();
 		int totalAlunos;
 
@@ -37,6 +38,13 @@ public class AlunoDao {
 		aluno.setId(totalAlunos);
 		matriculasMap.get("alunos").add(aluno);
 
+		persistir(matriculasMap);
+
+		return aluno;
+
+	}
+
+	private void persistir(Map<String, ArrayList<Aluno>> matriculasMap) {
 		String jsonListaAlunos = new GsonBuilder().setPrettyPrinting().create().toJson(matriculasMap);
 
 		try {
@@ -52,11 +60,11 @@ public class AlunoDao {
 
 		Type listaAlunos = new TypeToken<HashMap<String, ArrayList<Aluno>>>() {
 		}.getType();
-
-		matriculasMap = new GsonBuilder().setPrettyPrinting().create().fromJson(repository.recuperarJson(),
-				listaAlunos);
-
+		
 		try {
+			matriculasMap = new GsonBuilder().setPrettyPrinting().create().fromJson(repository.recuperarJson(),
+					listaAlunos);
+
 			repository.recuperarJson().close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -72,14 +80,14 @@ public class AlunoDao {
 		ArrayList<Aluno> alunos = matriculasMap.get("alunos");
 
 		for (Aluno a : alunos) {
-			
-			if(a.getEmail().equals(aluno.getEmail())) {
-				if(a.getSenha().equals(aluno.getSenha())) {
+
+			if (a.getEmail().equals(aluno.getEmail())) {
+				if (a.getSenha().equals(aluno.getSenha())) {
 					return true;
-					
+
 				}
 			}
-			
+
 		}
 		return false;
 

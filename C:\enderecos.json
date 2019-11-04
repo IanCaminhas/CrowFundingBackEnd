@@ -1,0 +1,236 @@
+{
+  "enderecos": [
+    {
+      "id": 1,
+      "rua": "Rua x",
+      "bairro": "bairro beta",
+      "numeroPropriedade": 34,
+      "complemento": "perto da esquina",
+      "logradouro": "qqq"
+    },
+    {
+      "id": 2,
+      "rua": "ss",
+      "bairro": "fdfd",
+      "numeroPropriedade": 22,
+      "complemento": "sdfsd",
+      "logradouro": "fff"
+    },
+    {
+      "id": 3,
+      "rua": "Rua x",
+      "bairro": "bairro beta",
+      "numeroPropriedade": 34,
+      "complemento": "perto da esquina",
+      "logradouro": "qqq"
+    },
+    {
+      "id": 4,
+      "rua": "rewrwwe",
+      "bairro": "werwwer",
+      "numeroPropriedade": 2,
+      "complemento": "ewwerwer",
+      "logradouro": "ewr"
+    },
+    {
+      "id": 5,
+      "rua": "rfdf",
+      "bairro": "dfgd",
+      "numeroPropriedade": 3434,
+      "complemento": "dfgd",
+      "logradouro": "dfgdfgd"
+    },
+    {
+      "id": 6,
+      "rua": "aeww",
+      "bairro": "ffdf",
+      "numeroPropriedade": 333,
+      "complemento": "asdad",
+      "logradouro": "sss"
+    },
+    {
+      "id": 7,
+      "rua": "Rua x",
+      "bairro": "bairro beta",
+      "numeroPropriedade": 34,
+      "complemento": "perto da esquina",
+      "logradouro": "qqq"
+    },
+    {
+      "id": 8,
+      "rua": "aaaaaaa",
+      "bairro": "Pampulha",
+      "numeroPropriedade": 333,
+      "complemento": "sdfsd",
+      "logradouro": "fff"
+    },
+    {
+      "id": 9,
+      "rua": "as",
+      "bairro": "asd",
+      "numeroPropriedade": 44,
+      "complemento": "asdas",
+      "logradouro": "asd"
+    },
+    {
+      "id": 10,
+      "rua": "ee",
+      "bairro": "dd",
+      "numeroPropriedade": 44,
+      "complemento": "asd",
+      "logradouro": "asd"
+    },
+    {
+      "id": 11,
+      "rua": "dsfs",
+      "bairro": "dsfs",
+      "numeroPropriedade": 343,
+      "complemento": "sdfsd",
+      "logradouro": "sdfsd"
+    },
+    {
+      "id": 12,
+      "rua": "sdfsd",
+      "bairro": "sdfsd",
+      "numeroPropriedade": 34,
+      "complemento": "sdfds",
+      "logradouro": "dsfsdf"
+    },
+    {
+      "id": 13,
+      "rua": "ds",
+      "bairro": "sdsf",
+      "numeroPropriedade": 3,
+      "complemento": "sd",
+      "logradouro": "d"
+    },
+    {
+      "id": 14,
+      "rua": "sdf",
+      "bairro": "dsfs",
+      "numeroPropriedade": 34,
+      "complemento": "sdf",
+      "logradouro": "sdf"
+    },
+    {
+      "id": 15,
+      "rua": "sdsd",
+      "bairro": "sdfds",
+      "numeroPropriedade": 23,
+      "complemento": "sdsdf",
+      "logradouro": "sdfsd"
+    },
+    {
+      "id": 16,
+      "rua": "sdfs",
+      "bairro": "sdfs",
+      "numeroPropriedade": 343,
+      "complemento": "sdsd",
+      "logradouro": "sdfds"
+    },
+    {
+      "id": 17,
+      "rua": "dsds",
+      "bairro": "sdfsd",
+      "numeroPropriedade": 342,
+      "complemento": "sdf",
+      "logradouro": "dsf"
+    },
+    {
+      "id": 18,
+      "rua": "sds",
+      "bairro": "dfd",
+      "numeroPropriedade": 34435,
+      "complemento": "sdfs",
+      "logradouro": "sdfs"
+    },
+    {
+      "id": 19,
+      "rua": "dsdf",
+      "bairro": "sdf",
+      "numeroPropriedade": 44,
+      "complemento": "dsfds",
+      "logradouro": "sdf"
+    },
+    {
+      "id": 20,
+      "rua": "Pampulha",
+      "bairro": "ffdf",
+      "numeroPropriedade": 232,
+      "complemento": "asdad",
+      "logradouro": "sss"
+    },
+    {
+      "id": 21,
+      "rua": "aaaaaaa",
+      "bairro": "fdfd",
+      "numeroPropriedade": 333,
+      "complemento": "sdf",
+      "logradouro": "abc"
+    },
+    {
+      "id": 22,
+      "rua": "sdfsd",
+      "bairro": "sdfds",
+      "numeroPropriedade": 34,
+      "complemento": "sdfsd",
+      "logradouro": "sdfsd"
+    },
+    {
+      "id": 23,
+      "rua": "sdfsd",
+      "bairro": "sdfds",
+      "numeroPropriedade": 34,
+      "complemento": "sdfsd",
+      "logradouro": "sdfsd"
+    },
+    {
+      "id": 24,
+      "rua": "dfsdf",
+      "bairro": "dfgdf",
+      "numeroPropriedade": 34,
+      "complemento": "dfgdf",
+      "logradouro": "dfgfd"
+    },
+    {
+      "id": 25,
+      "rua": "sdfsd",
+      "bairro": "dfgfd",
+      "numeroPropriedade": 444,
+      "complemento": "fdgfd",
+      "logradouro": "fdgdf"
+    },
+    {
+      "id": 26,
+      "rua": "sdfsd",
+      "bairro": "dfgfd",
+      "numeroPropriedade": 444,
+      "complemento": "fdgfd",
+      "logradouro": "fdgdf"
+    },
+    {
+      "id": 27,
+      "rua": "sdfsd",
+      "bairro": "rfd",
+      "numeroPropriedade": 345,
+      "complemento": "sdf",
+      "logradouro": "sdf"
+    },
+    {
+      "id": 28,
+      "rua": "dfsd",
+      "bairro": "dfd",
+      "numeroPropriedade": 3434,
+      "complemento": "dfdf",
+      "logradouro": "dffd"
+    },
+    {
+      "id": 29,
+      "rua": "sfsd",
+      "bairro": "dfd",
+      "numeroPropriedade": 34,
+      "complemento": "sedsdf",
+      "logradouro": "sdfs"
+    }
+  ]
+}

@@ -36,16 +36,10 @@ public class ArquivoRepository {
 
 	}
 
-	public BufferedReader recuperarJson() {
+	public BufferedReader recuperarJson() throws IOException {
 
 		BufferedReader bufferedReader = null;
-		try {
-			bufferedReader = new BufferedReader(new FileReader(Arquivo.getNomeArquivo(this.getArquivo())));
-
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-
+		bufferedReader = new BufferedReader(new FileReader(Arquivo.getNomeArquivo(this.getArquivo())));
 		return bufferedReader;
 
 	}

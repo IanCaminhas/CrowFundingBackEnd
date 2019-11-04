@@ -5,31 +5,55 @@
       "nome": "Ian Caminhas",
       "telefone": "(31) 975778166",
       "email": "an@gmail.com",
-      "dataNascimento": "1994-09-25",
       "cpf": "12799404685",
       "descricaoPerfil": "Engenharia de software",
       "rendaPerCapita": 600.0,
       "senha": "123",
-      "rua": "Rua x",
-      "bairro": "bairro beta",
-      "numeroPropriedade": 34,
-      "complemento": "perto da esquina",
-      "logradouro": "qqq"
+      "idEndereco": 7
     },
     {
       "id": 2,
-      "nome": "Tiago",
-      "telefone": "(31) 975778166",
-      "email": "an@gmail.com",
-      "dataNascimento": "1994-09-25",
-      "cpf": "12799404685",
-      "descricaoPerfil": "Engenharia de software",
-      "rendaPerCapita": 600.0,
+      "nome": "Ian pereira caminhas",
+      "telefone": "44444444",
+      "email": "caminhasian@gmail.com",
+      "cpf": "127888",
+      "descricaoPerfil": "ooo",
+      "rendaPerCapita": 33.0,
       "senha": "123",
-      "rua": "Rua x",
-      "bairro": "bairro beta",
-      "complemento": "perto da esquina",
-      "logradouro": "qqq"
+      "idEndereco": 8
+    },
+    {
+      "id": 3,
+      "nome": "java",
+      "telefone": "44444444",
+      "email": "caminhasian@gmail.com",
+      "cpf": "127888",
+      "descricaoPerfil": "as",
+      "rendaPerCapita": 33.0,
+      "senha": "sa",
+      "idEndereco": 9
+    },
+    {
+      "id": 4,
+      "nome": "oi veia",
+      "telefone": "44444444",
+      "email": "caminhasian@gmail.com",
+      "cpf": "127888",
+      "descricaoPerfil": "fsdc",
+      "rendaPerCapita": 33.0,
+      "senha": "12",
+      "idEndereco": 10
+    },
+    {
+      "id": 5,
+      "nome": "Ian pereira caminhas",
+      "telefone": "44444444",
+      "email": "caminhasian@gmail.com",
+      "cpf": "127888",
+      "descricaoPerfil": "asdsa",
+      "rendaPerCapita": 33.0,
+      "senha": "123",
+      "idEndereco": 16
     }
   ]
 }

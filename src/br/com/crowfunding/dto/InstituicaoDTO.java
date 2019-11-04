@@ -1,10 +1,7 @@
-package br.com.crowfunding.model;
+package br.com.crowfunding.dto;
 
-import java.util.ArrayList;
+public class InstituicaoDTO {
 
-public class Instituicao {
-
-	private Integer id;
 	private String nome;
 	private String cnpj;
 	private String telefone;
@@ -14,17 +11,15 @@ public class Instituicao {
 	private String conta;
 	private String agencia;
 	private String senha;
-	private Integer idEndereco;
-	private ArrayList<Integer> cursos = new ArrayList<Integer>();
-	
-	public Instituicao(String email, String senha) {
-		
-		this.email = email;
-		this.senha = senha;
-	}
-		
-	public Instituicao(String nome, String cnpj, String telefone, String email, String responsavel,
-			String descricao, String conta, String agencia, String senha, Integer idEndereco) {
+	private String rua;
+	private String bairro;
+	private Integer numeroPropriedade;
+	private String complemento;
+	private String logradouro;
+
+	public InstituicaoDTO(String nome, String cnpj, String telefone, String email, String responsavel, String descricao,
+			String conta, String agencia, String senha, String rua, String bairro, Integer numeroPropriedade,
+			String complemento, String logradouro) {
 		this.nome = nome;
 		this.cnpj = cnpj;
 		this.telefone = telefone;
@@ -34,15 +29,11 @@ public class Instituicao {
 		this.conta = conta;
 		this.agencia = agencia;
 		this.senha = senha;
-		this.idEndereco = idEndereco;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
+		this.rua = rua;
+		this.bairro = bairro;
+		this.numeroPropriedade = numeroPropriedade;
+		this.complemento = complemento;
+		this.logradouro = logradouro;
 	}
 
 	public String getNome() {
@@ -116,19 +107,45 @@ public class Instituicao {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	public Integer getIdEndereco() {
-		return idEndereco;
-	}
-	
-	public void setIdEndereco(Integer idEndereco) {
-		this.idEndereco = idEndereco;
-	}
-	
-	public ArrayList<Integer> getCursos() {
-		return cursos;
+
+	public String getRua() {
+		return rua;
 	}
 
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
 
-	
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public Integer getNumeroPropriedade() {
+		return numeroPropriedade;
+	}
+
+	public void setNumeroPropriedade(Integer numeroPropriedade) {
+		this.numeroPropriedade = numeroPropriedade;
+	}
+
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
 }

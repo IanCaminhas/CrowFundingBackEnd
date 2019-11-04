@@ -21,13 +21,13 @@ public class InstituicaoDao {
 		this.repository = new ArquivoRepository(Arquivo.INSTITUICAO);
 	}
 
-	public void adiciona(Instituicao Instituicao) {
+	public Instituicao adiciona(Instituicao instituicao) {
+
 		Map<String, ArrayList<Instituicao>> matriculasMap = this.getInstituicaos();
 
 		int totalinstituicoes;
 		if (repository.isArquivoVazio() || matriculasMap.get("instituicoes") == null) {
 			matriculasMap = new HashMap<String, ArrayList<Instituicao>>();
-			System.out.println(matriculasMap);
 			matriculasMap.put("instituicoes", new ArrayList<Instituicao>());
 			totalinstituicoes = 0;
 		} else {
@@ -35,9 +35,36 @@ public class InstituicaoDao {
 		}
 
 		totalinstituicoes++;
-		Instituicao.setId(totalinstituicoes);
-		matriculasMap.get("instituicoes").add(Instituicao);
+		instituicao.setId(totalinstituicoes);
+		matriculasMap.get("instituicoes").add(instituicao);
 
+		persistir(matriculasMap);
+		
+		return instituicao;
+	}
+
+	public void adicionarCurso(Integer idCurso, Integer idInstituicao) {
+		Map<String, ArrayList<Instituicao>> instituicoesMap = this.getInstituicaos();
+
+		boolean busca = false;
+		int cont = 0;
+		int totalInstituicoes = instituicoesMap.get("instituicoes").size();
+
+		while (!busca && (cont < totalInstituicoes)) {
+			if (instituicoesMap.get("instituicoes").get(cont).getId().equals(idInstituicao)) {
+				instituicoesMap.get("instituicoes").get(cont).getCursos().add(idCurso);
+				busca = true;
+			}
+
+			cont++;
+
+		}
+
+		persistir(instituicoesMap);
+
+	}
+
+	private void persistir(Map<String, ArrayList<Instituicao>> matriculasMap) {
 		String jsonListaInstituicaos = new GsonBuilder().setPrettyPrinting().create().toJson(matriculasMap);
 
 		try {
@@ -54,10 +81,10 @@ public class InstituicaoDao {
 		Type listaInstituicoes = new TypeToken<HashMap<String, ArrayList<Instituicao>>>() {
 		}.getType();
 
-		matriculasMap = new GsonBuilder().setPrettyPrinting().create().fromJson(repository.recuperarJson(),
-				listaInstituicoes);
-
 		try {
+			matriculasMap = new GsonBuilder().setPrettyPrinting().create().fromJson(repository.recuperarJson(),
+					listaInstituicoes);
+
 			repository.recuperarJson().close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -66,28 +93,24 @@ public class InstituicaoDao {
 		return matriculasMap;
 
 	}
-	
+
 	public boolean validaCredenciais(Instituicao instituicao) {
 		Map<String, ArrayList<Instituicao>> instituicoesMap = this.getInstituicaos();
 
 		ArrayList<Instituicao> instituicoes = instituicoesMap.get("instituicoes");
 
 		for (Instituicao i : instituicoes) {
-			
-			if(i.getEmail().equals(instituicao.getEmail())) {
-				if(i.getSenha().equals(instituicao.getSenha())) {
+
+			if (i.getEmail().equals(instituicao.getEmail())) {
+				if (i.getSenha().equals(instituicao.getSenha())) {
 					return true;
-					
+
 				}
 			}
-			
+
 		}
 		return false;
 
 	}
-	
-	
-	
-	
 
 }

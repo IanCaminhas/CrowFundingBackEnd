@@ -11,38 +11,33 @@ public class Aluno {
 	private String descricaoPerfil;
 	private Double rendaPerCapita;
 	private String senha;
-	private String rua;
-	private String bairro;
-	private Integer numeroPropriedade;
-	private String complemento;
-	private String logradouro;
-
+	private Integer idEndereco;
+	
 
 	public Aluno(String nome, String email) {
 		this.nome = nome;
 		this.email = email;
 	}
-
 	
-	public Aluno(Integer id, String nome, String telefone, String email, String dataNascimento, String cpf,
-			String descricaoPerfil, Double rendaPerCapita, String senha, String rua, String bairro, Integer numero,
-			String complemento, String logradouro) {
-		this.id = id;
+	public Integer getIdEndereco() {
+		return idEndereco;
+	}
+	
+	public void setIdEndereco(Integer idEndereco) {
+		this.idEndereco = idEndereco;
+	}
+	
+	public Aluno(String nome, String telefone, String email, String cpf,
+			String descricaoPerfil, Double rendaPerCapita, String senha,Integer idEndereco) {
 		this.nome = nome;
 		this.telefone = telefone;
 		this.email = email;
-		this.dataNascimento = dataNascimento;
 		this.cpf = cpf;
 		this.descricaoPerfil = descricaoPerfil;
 		this.rendaPerCapita = rendaPerCapita;
 		this.senha = senha;
-		this.rua = rua;
-		this.bairro = bairro;
-		this.numeroPropriedade = numero;
-		this.complemento = complemento;
-		this.logradouro = logradouro;
+		this.idEndereco=idEndereco;
 	}
-
 
 	public Integer getId() {
 		return id;
@@ -127,54 +122,6 @@ public class Aluno {
 	}
 
 
-	public String getRua() {
-		return rua;
-	}
-
-
-	public void setRua(String rua) {
-		this.rua = rua;
-	}
-
-
-	public String getBairro() {
-		return bairro;
-	}
-
-
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-
-
-	public Integer getNumero() {
-		return numeroPropriedade;
-	}
-
-
-	public void setNumero(Integer numero) {
-		this.numeroPropriedade = numero;
-	}
-
-
-	public String getComplemento() {
-		return complemento;
-	}
-
-
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
-
-
-	public String getLogradouro() {
-		return logradouro;
-	}
-
-
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
-	}
 	
 
 }

@@ -1,0 +1,15 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Java",
+      "valor": 1000.0,
+      "ementa": "POO",
+      "idInstituicao": 1,
+      "turmas": [
+        1,
+        2
+      ]
+    }
+  ]
+}

@@ -10,12 +10,18 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class CORSFilter implements ContainerResponseFilter {
 	@Override
-	public void filter(ContainerRequestContext request, ContainerResponseContext response) throws IOException {
-		response.getHeaders().add("Access-Control-Allow-Origin", "*");
-		response.getHeaders().add("Access-Control-Allow-Headers", "content-type");
-		response.getHeaders().add("Access-Control-Allow-Credentials", "true");
-		response.getHeaders().add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD");
-		//Access-Control-Allow-Headers
-	}
+    public void filter(ContainerRequestContext requestContext, 
+      ContainerResponseContext responseContext) throws IOException {
+          responseContext.getHeaders().add(
+            "Access-Control-Allow-Origin", "*");
+          responseContext.getHeaders().add(
+            "Access-Control-Allow-Credentials", "true");
+          responseContext.getHeaders().add(
+           "Access-Control-Allow-Headers",
+           "origin, content-type, accept, authorization");
+          responseContext.getHeaders().add(
+            "Access-Control-Allow-Methods", 
+            "GET, POST, PUT, DELETE, OPTIONS, HEAD");
+    }
 
 }
