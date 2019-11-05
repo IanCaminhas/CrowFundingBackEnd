@@ -319,6 +319,30 @@
       "numeroPropriedade": 3423,
       "complemento": "dsfds",
       "logradouro": "sdfdsf"
+    },
+    {
+      "id": 41,
+      "rua": "sdfsdf",
+      "bairro": "fddfg",
+      "numeroPropriedade": 56546,
+      "complemento": "dfgfdg",
+      "logradouro": "dfgg"
+    },
+    {
+      "id": 42,
+      "rua": "sddsf",
+      "bairro": "sdf",
+      "numeroPropriedade": 12,
+      "complemento": "sdf",
+      "logradouro": "sdfds"
+    },
+    {
+      "id": 43,
+      "rua": "sdsdf",
+      "bairro": "sdsfd",
+      "numeroPropriedade": 23,
+      "complemento": "sdfds",
+      "logradouro": "sdf"
     }
   ]
 }

@@ -63,7 +63,7 @@ public class EnderecoDao {
 
 		Type listaInstituicoes = new TypeToken<HashMap<String, ArrayList<Endereco>>>() {
 		}.getType();
-		
+
 		try {
 			enderecosMap = new GsonBuilder().setPrettyPrinting().create().fromJson(repository.recuperarJson(),
 					listaInstituicoes);
@@ -73,6 +73,20 @@ public class EnderecoDao {
 		}
 
 		return enderecosMap;
+
+	}
+
+	public Endereco getEndereco(Integer idEndereco) {
+
+		ArrayList<Endereco> list = this.getEnderecos().get("enderecos");
+
+		for (Endereco endereco : list) {
+			if (endereco.getId().equals(idEndereco))
+				return endereco;
+
+		}
+
+		return null;
 
 	}
 

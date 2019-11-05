@@ -33,6 +33,8 @@ public class AlunoDTO {
 		this.complemento = complemento;
 		this.logradouro = logradouro;
 	}
+	
+	
 
 	public String getNome() {
 		return nome;

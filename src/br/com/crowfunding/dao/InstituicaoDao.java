@@ -9,7 +9,9 @@ import java.util.Map;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import br.com.crowfunding.dto.InstituicaoDTO;
 import br.com.crowfunding.enums.Arquivo;
+import br.com.crowfunding.model.Endereco;
 import br.com.crowfunding.model.Instituicao;
 import br.com.crowfunding.repository.ArquivoRepository;
 
@@ -39,7 +41,7 @@ public class InstituicaoDao {
 		matriculasMap.get("instituicoes").add(instituicao);
 
 		persistir(matriculasMap);
-		
+
 		return instituicao;
 	}
 
@@ -94,22 +96,26 @@ public class InstituicaoDao {
 
 	}
 
-	public boolean validaCredenciais(Instituicao instituicao) {
+	public InstituicaoDTO validaCredenciais(UsuarioDTO usuario) {
 		Map<String, ArrayList<Instituicao>> instituicoesMap = this.getInstituicaos();
 
 		ArrayList<Instituicao> instituicoes = instituicoesMap.get("instituicoes");
 
 		for (Instituicao i : instituicoes) {
 
-			if (i.getEmail().equals(instituicao.getEmail())) {
-				if (i.getSenha().equals(instituicao.getSenha())) {
-					return true;
+			if (i.getEmail().equals(usuario.getEmail())) {
+				if (i.getSenha().equals(usuario.getSenha())) {
 
+					Endereco endereco = new EnderecoDao().getEndereco(i.getIdEndereco());
+					return new InstituicaoDTO(i.getNome(), i.getCnpj(), i.getTelefone(), i.getEmail(),
+							i.getResponsavel(), i.getDescricao(), i.getConta(), i.getAgencia(), i.getSenha(),
+							endereco.getRua(), endereco.getBairro(), endereco.getNumeroPropriedade(),
+							endereco.getComplemento(), endereco.getLogradouro());
 				}
 			}
 
 		}
-		return false;
+		return null;
 
 	}
 

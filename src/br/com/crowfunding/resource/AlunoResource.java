@@ -6,10 +6,12 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import br.com.crowfunding.dao.AlunoDao;
 import br.com.crowfunding.dao.EnderecoDao;
+import br.com.crowfunding.dao.UsuarioDTO;
 import br.com.crowfunding.dto.AlunoDTO;
 import br.com.crowfunding.model.Aluno;
 import br.com.crowfunding.model.Endereco;
@@ -34,6 +36,26 @@ public class AlunoResource {
 
 		return Response.status(201).build();
 	}
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("login")
+	public Response login(String credenciais) {
+
+		UsuarioDTO user = new GsonBuilder().setPrettyPrinting().create().fromJson(credenciais, UsuarioDTO.class);
+
+		AlunoDTO alunoDTO = new AlunoDao().validaCredenciais(user);
+
+		if (alunoDTO.equals(null)) {
+			return Response.status(404).build();
+		}
+
+		return Response.ok(new Gson().toJson(alunoDTO)).build();
+	}
+	
+	
+	
+	
 
 	private AlunoDTO fromDTO(String conteudo) {
 		return new GsonBuilder().setPrettyPrinting().create().fromJson(conteudo, AlunoDTO.class);

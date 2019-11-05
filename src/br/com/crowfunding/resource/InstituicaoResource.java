@@ -13,12 +13,12 @@ import javax.ws.rs.core.Response;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import br.com.crowfunding.dao.CursoDao;
 import br.com.crowfunding.dao.EnderecoDao;
 import br.com.crowfunding.dao.InstituicaoDao;
 import br.com.crowfunding.dao.TurmaDao;
+import br.com.crowfunding.dao.UsuarioDTO;
 import br.com.crowfunding.dto.CursoDTO;
 import br.com.crowfunding.dto.InstituicaoDTO;
 import br.com.crowfunding.dto.TurmaDTO;
@@ -87,8 +87,24 @@ public class InstituicaoResource {
 	public String getCursos(@PathParam("id") Integer id) {
 		System.out.println(id);
 		List<CursoDTO> cursosDaInstituicao = new CursoDao().getCursosDaInstituicao(id);
-		
+
 		return new GsonBuilder().setPrettyPrinting().create().toJson(cursosDaInstituicao);
+	}
+
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("login")
+	public Response login(String credenciais) {
+
+		UsuarioDTO user = new GsonBuilder().setPrettyPrinting().create().fromJson(credenciais, UsuarioDTO.class);
+
+		InstituicaoDTO instituicaoDTO = new InstituicaoDao().validaCredenciais(user);
+
+		if (instituicaoDTO.equals(null)) {
+			return Response.status(404).build();
+		}
+
+		return Response.ok(new Gson().toJson(instituicaoDTO)).build();
 	}
 
 	private InstituicaoDTO dtoParaInstituicao(String conteudo) {

@@ -9,8 +9,10 @@ import java.util.Map;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import br.com.crowfunding.dto.AlunoDTO;
 import br.com.crowfunding.enums.Arquivo;
 import br.com.crowfunding.model.Aluno;
+import br.com.crowfunding.model.Endereco;
 import br.com.crowfunding.repository.ArquivoRepository;
 
 public class AlunoDao {
@@ -74,22 +76,26 @@ public class AlunoDao {
 
 	}
 
-	public boolean validaCredenciais(Aluno aluno) {
-		Map<String, ArrayList<Aluno>> matriculasMap = this.getAlunos();
+	public AlunoDTO validaCredenciais(UsuarioDTO usuario) {
+		Map<String, ArrayList<Aluno>> instituicoesMap = this.getAlunos();
 
-		ArrayList<Aluno> alunos = matriculasMap.get("alunos");
+		ArrayList<Aluno> alunos = instituicoesMap.get("aluno");
 
 		for (Aluno a : alunos) {
 
-			if (a.getEmail().equals(aluno.getEmail())) {
-				if (a.getSenha().equals(aluno.getSenha())) {
-					return true;
+			if (a.getEmail().equals(usuario.getEmail())) {
+				if (a.getSenha().equals(usuario.getSenha())) {
 
+					Endereco endereco = new EnderecoDao().getEndereco(a.getIdEndereco());
+					return new AlunoDTO(a.getNome(), a.getTelefone(), a.getEmail(), a.getDataNascimento(), a.getCpf(), a.getDescricaoPerfil(), a.getRendaPerCapita(), a.getSenha(),
+							endereco.getRua(), endereco.getBairro(), endereco.getNumeroPropriedade(),
+							endereco.getComplemento(), endereco.getLogradouro());
+					
 				}
 			}
 
 		}
-		return false;
+		return null;
 
 	}
 
