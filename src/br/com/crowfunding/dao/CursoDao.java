@@ -4,11 +4,13 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import br.com.crowfunding.dto.CursoDTO;
 import br.com.crowfunding.enums.Arquivo;
 import br.com.crowfunding.model.Curso;
 import br.com.crowfunding.repository.ArquivoRepository;
@@ -22,8 +24,6 @@ public class CursoDao {
 	}
 
 	public Curso adiciona(Curso curso) {
-
-		
 
 		Map<String, ArrayList<Curso>> cursosMap = this.getCursos();
 
@@ -94,6 +94,34 @@ public class CursoDao {
 		}
 
 		persistir(cursosMap);
+
+	}
+
+	public List<CursoDTO> getCursosDaInstituicao(Integer idInstituicao) {
+
+		Map<String, ArrayList<Curso>> cursosMap = this.getCursos();
+		List<CursoDTO> list = new ArrayList<CursoDTO>();
+
+		int cont = 0;
+		int totalCursos = cursosMap.get("cursos").size();
+
+		while (cont < totalCursos) {
+			Curso curso = cursosMap.get("cursos").get(cont);
+			if ((curso.getIdInstituicao() !=null) && curso.getIdInstituicao().equals(idInstituicao)) {
+			
+				
+				CursoDTO cursoDTO = new CursoDTO(curso.getNome(), curso.getValor(), curso.getEmenta(),
+						curso.getIdInstituicao());
+				cursoDTO.setId(curso.getId());
+				list.add(cursoDTO);
+
+			}
+
+			cont++;
+
+		}
+
+		return list;
 
 	}
 

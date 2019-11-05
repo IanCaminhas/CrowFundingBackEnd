@@ -1,12 +1,19 @@
 package br.com.crowfunding.resource;
 
+import java.util.List;
+
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import br.com.crowfunding.dao.CursoDao;
 import br.com.crowfunding.dao.EnderecoDao;
@@ -39,7 +46,9 @@ public class InstituicaoResource {
 
 		instituicao = new InstituicaoDao().adiciona(instituicao);
 
-		return Response.ok().build();
+		instituicaoDTO.setId(instituicao.getId());
+
+		return Response.ok(new Gson().toJson(instituicaoDTO)).build();
 	}
 
 	@POST
@@ -53,7 +62,7 @@ public class InstituicaoResource {
 				new Curso(cursoDTO.getNome(), cursoDTO.getValor(), cursoDTO.getEmenta(), cursoDTO.getIdInstituicao()));
 		new InstituicaoDao().adicionarCurso(curso.getId(), curso.getIdInstituicao());
 
-		return Response.status(201).build();
+		return Response.ok().build();
 
 	}
 
@@ -70,6 +79,16 @@ public class InstituicaoResource {
 		new CursoDao().adicionarTurma(turma.getIdCurso(), turma.getId());
 		return Response.status(201).build();
 
+	}
+
+	@Path("cursos/{id}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getCursos(@PathParam("id") Integer id) {
+		System.out.println(id);
+		List<CursoDTO> cursosDaInstituicao = new CursoDao().getCursosDaInstituicao(id);
+		
+		return new GsonBuilder().setPrettyPrinting().create().toJson(cursosDaInstituicao);
 	}
 
 	private InstituicaoDTO dtoParaInstituicao(String conteudo) {

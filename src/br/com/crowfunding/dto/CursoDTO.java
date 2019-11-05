@@ -2,6 +2,7 @@ package br.com.crowfunding.dto;
 
 public class CursoDTO {
 
+	private Integer id;
 	private String nome;
 	private Double valor;
 	private String ementa;
@@ -38,9 +39,12 @@ public class CursoDTO {
 		this.idInstituicao = idInstituicao;
 	}
 	
+	public Integer getId() {
+		return id;
+	}
 	
-	
-	
-	
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	
 }

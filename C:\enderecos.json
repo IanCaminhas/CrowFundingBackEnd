@@ -231,6 +231,94 @@
       "numeroPropriedade": 34,
       "complemento": "sedsdf",
       "logradouro": "sdfs"
+    },
+    {
+      "id": 30,
+      "rua": "sdfsdf",
+      "bairro": "dvdfd",
+      "numeroPropriedade": 4534,
+      "complemento": "sdfsfd",
+      "logradouro": "sdfdsf"
+    },
+    {
+      "id": 31,
+      "rua": "bdjfsf",
+      "bairro": "hsdfs",
+      "numeroPropriedade": 44,
+      "complemento": "sdjsd",
+      "logradouro": "sdfds"
+    },
+    {
+      "id": 32,
+      "rua": "sdfsfd",
+      "bairro": "sdfds",
+      "numeroPropriedade": 34,
+      "complemento": "dsd",
+      "logradouro": "sds"
+    },
+    {
+      "id": 33,
+      "rua": "sdsdf",
+      "bairro": "sdf",
+      "numeroPropriedade": 34,
+      "complemento": "sdfsdf",
+      "logradouro": "sdfs"
+    },
+    {
+      "id": 34,
+      "rua": "sdfsdf",
+      "bairro": "sdsf",
+      "numeroPropriedade": 43554,
+      "complemento": "sdfdsf",
+      "logradouro": "sddsf"
+    },
+    {
+      "id": 35,
+      "rua": "hjhj",
+      "bairro": "uhjbhj",
+      "numeroPropriedade": 89,
+      "complemento": "hbj",
+      "logradouro": "hj"
+    },
+    {
+      "id": 36,
+      "rua": "hjhj",
+      "bairro": "uhjbhj",
+      "numeroPropriedade": 89,
+      "complemento": "hbj",
+      "logradouro": "hj"
+    },
+    {
+      "id": 37,
+      "rua": "hjhj",
+      "bairro": "uhjbhj",
+      "numeroPropriedade": 89,
+      "complemento": "hbj",
+      "logradouro": "hj"
+    },
+    {
+      "id": 38,
+      "rua": "hjhj",
+      "bairro": "uhjbhj",
+      "numeroPropriedade": 89,
+      "complemento": "hbj",
+      "logradouro": "hj"
+    },
+    {
+      "id": 39,
+      "rua": "sdfsdff",
+      "bairro": "sdsdf",
+      "numeroPropriedade": 43545,
+      "complemento": "sdsdf",
+      "logradouro": "sdfsdf"
+    },
+    {
+      "id": 40,
+      "rua": "dsfsd",
+      "bairro": "dfsd",
+      "numeroPropriedade": 3423,
+      "complemento": "dsfds",
+      "logradouro": "sdfdsf"
     }
   ]
 }
