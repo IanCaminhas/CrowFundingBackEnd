@@ -2,6 +2,7 @@ package br.com.crowfunding.dto;
 
 public class AlunoDTO {
 
+	private Integer id;
 	private String nome;
 	private String telefone;
 	private String email;
@@ -138,6 +139,14 @@ public class AlunoDTO {
 
 	public void setLogradouro(String logradouro) {
 		this.logradouro = logradouro;
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

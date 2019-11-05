@@ -62,7 +62,7 @@ public class AlunoDao {
 
 		Type listaAlunos = new TypeToken<HashMap<String, ArrayList<Aluno>>>() {
 		}.getType();
-		
+
 		try {
 			matriculasMap = new GsonBuilder().setPrettyPrinting().create().fromJson(repository.recuperarJson(),
 					listaAlunos);
@@ -87,10 +87,14 @@ public class AlunoDao {
 				if (a.getSenha().equals(usuario.getSenha())) {
 
 					Endereco endereco = new EnderecoDao().getEndereco(a.getIdEndereco());
-					return new AlunoDTO(a.getNome(), a.getTelefone(), a.getEmail(), a.getDataNascimento(), a.getCpf(), a.getDescricaoPerfil(), a.getRendaPerCapita(), a.getSenha(),
-							endereco.getRua(), endereco.getBairro(), endereco.getNumeroPropriedade(),
-							endereco.getComplemento(), endereco.getLogradouro());
-					
+					AlunoDTO alunoDTO = new AlunoDTO(a.getNome(), a.getTelefone(), a.getEmail(), a.getDataNascimento(),
+							a.getCpf(), a.getDescricaoPerfil(), a.getRendaPerCapita(), a.getSenha(), endereco.getRua(),
+							endereco.getBairro(), endereco.getNumeroPropriedade(), endereco.getComplemento(),
+							endereco.getLogradouro());
+
+					alunoDTO.setId(a.getId());
+					return alunoDTO;
+
 				}
 			}
 

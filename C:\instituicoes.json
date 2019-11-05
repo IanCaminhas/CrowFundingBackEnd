@@ -93,7 +93,9 @@
       "agencia": "232",
       "senha": "123",
       "idEndereco": 6,
-      "cursos": []
+      "cursos": [
+        17
+      ]
     },
     {
       "id": 7,
@@ -550,6 +552,20 @@
         13,
         14
       ]
+    },
+    {
+      "id": 39,
+      "nome": "IFNMG",
+      "cnpj": "12",
+      "telefone": "3434",
+      "email": "caminhasian@gmail.com",
+      "responsavel": "Reitor",
+      "descricao": "sdsdf",
+      "conta": "344",
+      "agencia": "3345",
+      "senha": "123",
+      "idEndereco": 44,
+      "cursos": []
     }
   ]
 }

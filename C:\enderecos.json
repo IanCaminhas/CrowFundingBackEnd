@@ -343,6 +343,14 @@
       "numeroPropriedade": 23,
       "complemento": "sdfds",
       "logradouro": "sdf"
+    },
+    {
+      "id": 44,
+      "rua": "dsfs",
+      "bairro": "dfds",
+      "numeroPropriedade": 34,
+      "complemento": "sdfsd",
+      "logradouro": "sdf"
     }
   ]
 }

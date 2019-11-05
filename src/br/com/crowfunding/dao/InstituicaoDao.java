@@ -107,10 +107,13 @@ public class InstituicaoDao {
 				if (i.getSenha().equals(usuario.getSenha())) {
 
 					Endereco endereco = new EnderecoDao().getEndereco(i.getIdEndereco());
-					return new InstituicaoDTO(i.getNome(), i.getCnpj(), i.getTelefone(), i.getEmail(),
+					 InstituicaoDTO instituicaoDTO = new InstituicaoDTO(i.getNome(), i.getCnpj(), i.getTelefone(), i.getEmail(),
 							i.getResponsavel(), i.getDescricao(), i.getConta(), i.getAgencia(), i.getSenha(),
 							endereco.getRua(), endereco.getBairro(), endereco.getNumeroPropriedade(),
 							endereco.getComplemento(), endereco.getLogradouro());
+					 instituicaoDTO.setId(i.getId());
+					 return instituicaoDTO;
+					 
 				}
 			}
 

@@ -115,6 +115,28 @@
       "ementa": "sddsf",
       "idInstituicao": 38,
       "turmas": []
+    },
+    {
+      "id": 15,
+      "nome": "TIC",
+      "valor": 1212.0,
+      "ementa": "dad",
+      "turmas": []
+    },
+    {
+      "id": 16,
+      "nome": "Processos",
+      "valor": 334.0,
+      "ementa": "ddf",
+      "turmas": []
+    },
+    {
+      "id": 17,
+      "nome": "TIS VI",
+      "valor": 233.0,
+      "ementa": "sdsdf",
+      "idInstituicao": 6,
+      "turmas": []
     }
   ]
 }
