@@ -54,6 +54,28 @@
       "rendaPerCapita": 33.0,
       "senha": "123",
       "idEndereco": 16
+    },
+    {
+      "id": 6,
+      "nome": "Marcio",
+      "telefone": "45345",
+      "email": "pereira@gmail.com",
+      "cpf": "1qwwe",
+      "descricaoPerfil": "sd",
+      "rendaPerCapita": 4545.0,
+      "senha": "123",
+      "idEndereco": 45
+    },
+    {
+      "id": 7,
+      "nome": "sds",
+      "telefone": "213",
+      "email": "sd@gmailcom",
+      "cpf": "23123",
+      "descricaoPerfil": "sdf",
+      "rendaPerCapita": 33.0,
+      "senha": "123",
+      "idEndereco": 46
     }
   ]
 }

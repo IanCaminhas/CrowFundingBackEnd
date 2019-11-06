@@ -351,6 +351,22 @@
       "numeroPropriedade": 34,
       "complemento": "sdfsd",
       "logradouro": "sdf"
+    },
+    {
+      "id": 45,
+      "rua": "dssdf",
+      "bairro": "sdfs",
+      "numeroPropriedade": 435,
+      "complemento": "dsf",
+      "logradouro": "sdf"
+    },
+    {
+      "id": 46,
+      "rua": "sddf",
+      "bairro": "dd",
+      "numeroPropriedade": 232,
+      "complemento": "sdfsdf",
+      "logradouro": "sdf"
     }
   ]
 }

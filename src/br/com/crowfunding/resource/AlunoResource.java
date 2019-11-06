@@ -11,8 +11,8 @@ import com.google.gson.GsonBuilder;
 
 import br.com.crowfunding.dao.AlunoDao;
 import br.com.crowfunding.dao.EnderecoDao;
-import br.com.crowfunding.dao.UsuarioDTO;
 import br.com.crowfunding.dto.AlunoDTO;
+import br.com.crowfunding.dto.UsuarioDTO;
 import br.com.crowfunding.model.Aluno;
 import br.com.crowfunding.model.Endereco;
 
@@ -41,6 +41,7 @@ public class AlunoResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("login")
 	public Response login(String credenciais) {
+		System.out.println(credenciais);
 
 		UsuarioDTO user = new GsonBuilder().setPrettyPrinting().create().fromJson(credenciais, UsuarioDTO.class);
 

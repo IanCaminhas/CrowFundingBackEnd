@@ -10,6 +10,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import br.com.crowfunding.dto.AlunoDTO;
+import br.com.crowfunding.dto.UsuarioDTO;
 import br.com.crowfunding.enums.Arquivo;
 import br.com.crowfunding.model.Aluno;
 import br.com.crowfunding.model.Endereco;
@@ -79,7 +80,7 @@ public class AlunoDao {
 	public AlunoDTO validaCredenciais(UsuarioDTO usuario) {
 		Map<String, ArrayList<Aluno>> instituicoesMap = this.getAlunos();
 
-		ArrayList<Aluno> alunos = instituicoesMap.get("aluno");
+		ArrayList<Aluno> alunos = instituicoesMap.get("alunos");
 
 		for (Aluno a : alunos) {
 

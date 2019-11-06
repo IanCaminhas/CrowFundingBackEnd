@@ -10,6 +10,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import br.com.crowfunding.dto.InstituicaoDTO;
+import br.com.crowfunding.dto.UsuarioDTO;
 import br.com.crowfunding.enums.Arquivo;
 import br.com.crowfunding.model.Endereco;
 import br.com.crowfunding.model.Instituicao;

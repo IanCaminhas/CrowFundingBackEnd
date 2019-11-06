@@ -1,4 +1,4 @@
-package br.com.crowfunding.dao;
+package br.com.crowfunding.dto;
 
 public class UsuarioDTO {
 
