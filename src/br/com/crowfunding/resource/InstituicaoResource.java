@@ -35,7 +35,6 @@ public class InstituicaoResource {
 	@Path("cadastrar")
 	public Response cadastrarInstituicao(String dadosInstituicao) {
 		InstituicaoDTO instituicaoDTO = this.dtoParaInstituicao(dadosInstituicao);
-		System.out.println(dadosInstituicao);
 		Endereco endereco = new EnderecoDao().adiciona(instituicaoDTO.getRua(), instituicaoDTO.getBairro(),
 				instituicaoDTO.getNumeroPropriedade(), instituicaoDTO.getComplemento(), instituicaoDTO.getLogradouro());
 
