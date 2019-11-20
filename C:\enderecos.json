@@ -367,6 +367,38 @@
       "numeroPropriedade": 232,
       "complemento": "sdfsdf",
       "logradouro": "sdf"
+    },
+    {
+      "id": 47,
+      "rua": "X",
+      "bairro": "Y",
+      "numeroPropriedade": 22,
+      "complemento": "savassi",
+      "logradouro": "z"
+    },
+    {
+      "id": 48,
+      "rua": "wewe",
+      "bairro": "sdf",
+      "numeroPropriedade": 34,
+      "complemento": "sdf",
+      "logradouro": "sdf"
+    },
+    {
+      "id": 49,
+      "rua": "Pampulha",
+      "bairro": "BANDEIRANTES (PAMPULHA)",
+      "numeroPropriedade": 33,
+      "complemento": "sdfds",
+      "logradouro": "abc"
+    },
+    {
+      "id": 50,
+      "rua": "rua dos malucos",
+      "bairro": "ds",
+      "numeroPropriedade": 33,
+      "complemento": "d",
+      "logradouro": "df"
     }
   ]
 }

@@ -566,6 +566,53 @@
       "senha": "123",
       "idEndereco": 44,
       "cursos": []
+    },
+    {
+      "id": 40,
+      "nome": "PUC MG",
+      "cnpj": "1221232323",
+      "telefone": "3313731667667",
+      "email": "puc@gmail.com",
+      "responsavel": "Tadeu",
+      "descricao": "I. Catolica",
+      "conta": "121212",
+      "agencia": "24343",
+      "senha": "123",
+      "idEndereco": 47,
+      "cursos": [
+        18
+      ]
+    },
+    {
+      "id": 41,
+      "nome": "IFNMG",
+      "cnpj": "112323",
+      "telefone": "3445",
+      "email": "bozo@gmail.com",
+      "responsavel": "44",
+      "descricao": "awsd",
+      "conta": "344",
+      "agencia": "345",
+      "senha": "123",
+      "idEndereco": 48,
+      "cursos": [
+        19,
+        20
+      ]
+    },
+    {
+      "id": 42,
+      "nome": "Unopar",
+      "cnpj": "121212",
+      "telefone": "43434",
+      "email": "caminhasian@gmail.com",
+      "responsavel": "tio",
+      "descricao": "tiozao",
+      "conta": "112",
+      "agencia": "23423",
+      "senha": "123",
+      "idEndereco": 50,
+      "cursos": []
     }
   ]
 }

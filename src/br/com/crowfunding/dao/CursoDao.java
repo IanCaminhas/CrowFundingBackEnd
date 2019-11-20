@@ -56,6 +56,21 @@ public class CursoDao {
 		}
 	}
 
+	public Curso getCurso(Integer id) {
+
+		ArrayList<Curso> list = this.getCursos().get("cursos");
+
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId().equals(id)) {
+				return list.get(i);
+			}
+
+		}
+
+		return null;
+
+	}
+
 	public Map<String, ArrayList<Curso>> getCursos() {
 
 		Map<String, ArrayList<Curso>> cursosMap = null;
@@ -107,9 +122,8 @@ public class CursoDao {
 
 		while (cont < totalCursos) {
 			Curso curso = cursosMap.get("cursos").get(cont);
-			if ((curso.getIdInstituicao() !=null) && curso.getIdInstituicao().equals(idInstituicao)) {
-			
-				
+			if ((curso.getIdInstituicao() != null) && curso.getIdInstituicao().equals(idInstituicao)) {
+
 				CursoDTO cursoDTO = new CursoDTO(curso.getNome(), curso.getValor(), curso.getEmenta(),
 						curso.getIdInstituicao());
 				cursoDTO.setId(curso.getId());

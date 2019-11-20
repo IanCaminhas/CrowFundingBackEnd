@@ -9,9 +9,14 @@ import java.util.Map;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import br.com.crowfunding.dto.TurmaCursoInstituicaoDTO;
 import br.com.crowfunding.enums.Arquivo;
+import br.com.crowfunding.model.Curso;
+import br.com.crowfunding.model.Endereco;
+import br.com.crowfunding.model.Instituicao;
 import br.com.crowfunding.model.Turma;
 import br.com.crowfunding.repository.ArquivoRepository;
+import br.com.crowfunding.utils.Data;
 
 public class TurmaDao {
 
@@ -71,6 +76,53 @@ public class TurmaDao {
 		}
 
 		return turmasMap;
+
+	}
+	
+	public Turma getTurma(Integer id) {
+
+		ArrayList<Turma> list = this.getTurmas().get("turmas");
+
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId().equals(id)) {
+				return list.get(i);
+			}
+
+		}
+
+		return null;
+
+	}
+	
+	
+
+	public ArrayList<TurmaCursoInstituicaoDTO> getTurmasValidas() {
+
+		ArrayList<Turma> listTotalTurmas = this.getTurmas().get("turmas");
+
+		ArrayList<TurmaCursoInstituicaoDTO> listTurmasValidas = new ArrayList<TurmaCursoInstituicaoDTO>();
+		for (int i = 0; i < listTotalTurmas.size(); i++) {
+
+			Turma turma = listTotalTurmas.get(i);
+
+			if (Data.stringParaDate(turma.getDataInicio()).before(Data.obterDataHoje())) {
+
+				Curso curso = new CursoDao().getCurso(turma.getIdCurso());
+				Instituicao instituicao = new InstituicaoDao().getInstituicao(curso.getId());
+				Endereco endereco = new EnderecoDao().getEndereco(instituicao.getIdEndereco());
+
+				TurmaCursoInstituicaoDTO turmaCursoInstituicaoDTO = new TurmaCursoInstituicaoDTO(turma.getId(),
+						curso.getNome(), instituicao.getNome(), curso.getValor(), turma.getDataInicio(),
+						turma.getHorarioTermino(), turma.getHorarioInicio(), turma.getHorarioTermino(),
+						endereco.toString());
+
+				listTurmasValidas.add(turmaCursoInstituicaoDTO);
+
+			}
+
+		}
+
+		return listTurmasValidas;
 
 	}
 

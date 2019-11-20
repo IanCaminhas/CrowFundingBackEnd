@@ -122,5 +122,24 @@ public class InstituicaoDao {
 		return null;
 
 	}
+	
+	public Instituicao getInstituicao(Integer id) {
+
+		ArrayList<Instituicao> list = this.getInstituicaos().get("instituicoes");
+
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId().equals(id)) {
+				return list.get(i);
+			}
+
+		}
+
+		return null;
+
+	}
+	
+	
+	
+	
 
 }

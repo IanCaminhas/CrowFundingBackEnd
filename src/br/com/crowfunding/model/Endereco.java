@@ -9,8 +9,7 @@ public class Endereco {
 	private String complemento;
 	private String logradouro;
 
-	public Endereco(String rua, String bairro, Integer numeroPropriedade, String complemento,
-			String logradouro) {
+	public Endereco(String rua, String bairro, Integer numeroPropriedade, String complemento, String logradouro) {
 		this.rua = rua;
 		this.bairro = bairro;
 		this.numeroPropriedade = numeroPropriedade;
@@ -64,6 +63,12 @@ public class Endereco {
 
 	public void setLogradouro(String logradouro) {
 		this.logradouro = logradouro;
+	}
+
+	@Override
+	public String toString() {
+		return "rua:" + rua + ", bairro:" + bairro + ", numeroPropriedade:" + numeroPropriedade + ", complemento:"
+				+ complemento + ", logradouro:" + logradouro + "";
 	}
 
 }

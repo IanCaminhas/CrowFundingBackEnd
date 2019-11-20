@@ -23,7 +23,6 @@ public class AlunoResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("cadastrar")
 	public Response adiciona(String dadosAluno) {
-		System.out.println(dadosAluno);
 		AlunoDTO alunoDTO = this.fromDTO(dadosAluno);
 
 		Endereco endereco = new EnderecoDao().adiciona(alunoDTO.getRua(), alunoDTO.getBairro(),
@@ -41,7 +40,6 @@ public class AlunoResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("login")
 	public Response login(String credenciais) {
-		System.out.println(credenciais);
 
 		UsuarioDTO user = new GsonBuilder().setPrettyPrinting().create().fromJson(credenciais, UsuarioDTO.class);
 
@@ -53,10 +51,6 @@ public class AlunoResource {
 
 		return Response.ok(new Gson().toJson(alunoDTO)).build();
 	}
-	
-	
-	
-	
 
 	private AlunoDTO fromDTO(String conteudo) {
 		return new GsonBuilder().setPrettyPrinting().create().fromJson(conteudo, AlunoDTO.class);

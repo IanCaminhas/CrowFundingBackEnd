@@ -103,5 +103,25 @@ public class AlunoDao {
 		return null;
 
 	}
+	
+	public Aluno getAluno(Integer id) {
+
+		ArrayList<Aluno> list = this.getAlunos().get("alunos");
+
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId().equals(id)) {
+				return list.get(i);
+			}
+
+		}
+
+		return null;
+
+	}
+	
+	
+	
+	
+	
 
 }
