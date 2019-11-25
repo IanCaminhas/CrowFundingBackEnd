@@ -25,15 +25,18 @@ public class AlunoResource {
 	public Response adiciona(String dadosAluno) {
 		AlunoDTO alunoDTO = this.fromDTO(dadosAluno);
 
+		System.out.println(alunoDTO.getDataNascimento());
 		Endereco endereco = new EnderecoDao().adiciona(alunoDTO.getRua(), alunoDTO.getBairro(),
 				alunoDTO.getNumeroPropriedade(), alunoDTO.getComplemento(), alunoDTO.getLogradouro());
 
 		Aluno aluno = new Aluno(alunoDTO.getNome(), alunoDTO.getTelefone(), alunoDTO.getEmail(), alunoDTO.getCpf(),
-				alunoDTO.getDescricaoPerfil(), alunoDTO.getRendaPerCapita(), alunoDTO.getSenha(), endereco.getId());
+				alunoDTO.getDescricaoPerfil(), alunoDTO.getRendaPerCapita(), alunoDTO.getSenha(), endereco.getId(), alunoDTO.getDataNascimento());
 
-		new AlunoDao().adiciona(aluno);
+		Aluno a = new AlunoDao().adiciona(aluno);
+		alunoDTO.setId(a.getId());
 
-		return Response.status(201).build();
+		return Response.ok(new Gson().toJson(alunoDTO)).build();
+
 	}
 	
 	@POST

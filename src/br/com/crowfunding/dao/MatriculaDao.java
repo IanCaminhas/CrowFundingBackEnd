@@ -10,11 +10,14 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import br.com.crowfunding.dto.DadosParaDoacaoDTO;
+import br.com.crowfunding.dto.MatriculaDoAlunoDTO;
+import br.com.crowfunding.dto.MatriculasDaInstituicaoDTO;
 import br.com.crowfunding.enums.Arquivo;
 import br.com.crowfunding.enums.EstadoMatricula;
 import br.com.crowfunding.model.Aluno;
 import br.com.crowfunding.model.Curso;
 import br.com.crowfunding.model.Doacao;
+import br.com.crowfunding.model.Endereco;
 import br.com.crowfunding.model.Instituicao;
 import br.com.crowfunding.model.Matricula;
 import br.com.crowfunding.model.Turma;
@@ -25,7 +28,7 @@ public class MatriculaDao {
 	private ArquivoRepository repository;
 
 	public MatriculaDao() {
-		this.repository = new ArquivoRepository(Arquivo.ALUNO);
+		this.repository = new ArquivoRepository(Arquivo.MATRICULAS);
 	}
 
 	public Matricula adiciona(Matricula matricula) {
@@ -55,6 +58,65 @@ public class MatriculaDao {
 		}
 	}
 
+	public ArrayList<MatriculasDaInstituicaoDTO> matriculasDaInstituicao(Integer idInstituicao) {
+
+		ArrayList<Matricula> listMatriculas = this.getMatriculas().get("matriculas");
+		ArrayList<MatriculasDaInstituicaoDTO> listAlunos = new ArrayList<MatriculasDaInstituicaoDTO>();
+		for (int i = 0; i < listMatriculas.size(); i++) {
+
+			Matricula matricula = listMatriculas.get(i);
+			Turma turma = new TurmaDao().getTurma(matricula.getIdTurma());
+			Curso curso = new CursoDao().getCurso(turma.getIdCurso());
+			Instituicao instituicao = new InstituicaoDao().getInstituicao(curso.getIdInstituicao());
+
+			if (instituicao.getId().equals(idInstituicao)) {
+
+				Aluno aluno = new AlunoDao().getAluno(matricula.getIdAluno());
+				Endereco enderecoAluno = new EnderecoDao().getEndereco(aluno.getIdEndereco());
+
+				MatriculasDaInstituicaoDTO alunoParaAnaliseDTO = new MatriculasDaInstituicaoDTO(aluno.getNome(),
+						curso.getNome(), turma.getHorarioInicio(), turma.getHorarioTermino(), turma.getDataInicio(),
+						turma.getPrevisaoTermino(),
+						EstadoMatricula.getDescricaoEstadoMatricula(matricula.getEstadoMatricula()), aluno.getId(),
+						turma.getId(), enderecoAluno.toString(), aluno.getRendaPerCapita(), aluno.getDescricaoPerfil(),
+						curso.getEmenta());
+				listAlunos.add(alunoParaAnaliseDTO);
+			}
+
+		}
+
+		return listAlunos;
+	}
+	
+
+	public ArrayList<MatriculaDoAlunoDTO> matriculasDoAluno(Integer idAluno) {
+
+		ArrayList<Matricula> listMatriculas = this.getMatriculas().get("matriculas");
+		ArrayList<MatriculaDoAlunoDTO> listMatriculasDoAluno = new ArrayList<MatriculaDoAlunoDTO>();
+		for (int i = 0; i < listMatriculas.size(); i++) {
+
+			Matricula matricula = listMatriculas.get(i);
+			Turma turma = new TurmaDao().getTurma(matricula.getIdTurma());
+			Curso curso = new CursoDao().getCurso(turma.getIdCurso());
+			Instituicao instituicao = new InstituicaoDao().getInstituicao(curso.getIdInstituicao());
+			if (matricula.getIdAluno().equals(idAluno)) {
+
+				MatriculaDoAlunoDTO matriculaDoAlunoDTO = new MatriculaDoAlunoDTO(curso.getNome(), instituicao.getNome(), EstadoMatricula.getDescricaoEstadoMatricula(matricula.getEstadoMatricula()), turma.getHorarioInicio(), turma.getHorarioTermino(), turma.getDataInicio(), turma.getPrevisaoTermino(), curso.getEmenta(), curso.getValor(), matricula.getMontanteDoacao());
+				
+				listMatriculasDoAluno.add(matriculaDoAlunoDTO);
+			}
+
+		}
+
+		return listMatriculasDoAluno;
+	}
+	
+	
+	
+	
+	
+	
+
 	public Map<String, ArrayList<Matricula>> getMatriculas() {
 
 		Map<String, ArrayList<Matricula>> matriculasMap = null;
@@ -77,36 +139,49 @@ public class MatriculaDao {
 
 	public void aprovarAluno(Integer idAluno, Integer idTurma) {
 
-		for (int i = 0; i < this.getMatriculas().get("matriculas").size(); i++) {
-			Matricula matricula = this.getMatriculas().get("matriculas").get(i);
+		Map<String, ArrayList<Matricula>> map = this.getMatriculas();
+		int size = map.get("matriculas").size();
+		
 
+		for (int i = 0; i < size; i++) {
+			Matricula matricula = map.get("matriculas").get(i);
 			if (matricula.getIdAluno().equals(idAluno) && matricula.getIdTurma().equals(idTurma)) {
-				this.getMatriculas().get("matriculas").get(i)
+
+				map.get("matriculas").get(i)
 						.setEstadoMatricula(EstadoMatricula.getCodEstadoMatricula(EstadoMatricula.APROVADO));
-				this.persistir(this.getMatriculas());
+				this.persistir(map);
+
 				return;
 			}
 
 		}
 
 	}
-
+	
 	public void reprovarAluno(Integer idAluno, Integer idTurma) {
 
-		for (int i = 0; i < this.getMatriculas().get("matriculas").size(); i++) {
-			Matricula matricula = this.getMatriculas().get("matriculas").get(i);
+		Map<String, ArrayList<Matricula>> map = this.getMatriculas();
+		int size = map.get("matriculas").size();
 
+		for (int i = 0; i < size; i++) {
+
+			Matricula matricula = map.get("matriculas").get(i);
 			if (matricula.getIdAluno().equals(idAluno) && matricula.getIdTurma().equals(idTurma)) {
-				this.getMatriculas().get("matriculas").get(i)
+				map.get("matriculas").get(i)
 						.setEstadoMatricula(EstadoMatricula.getCodEstadoMatricula(EstadoMatricula.REPROVADO));
-				this.persistir(this.getMatriculas());
+				this.persistir(map);
+
 				return;
 			}
 
 		}
 
 	}
+	
+	
 
+
+	
 	public ArrayList<DadosParaDoacaoDTO> getDadosParaRealizarDoacao() {
 
 		ArrayList<Matricula> listMatriculas = this.getMatriculas().get("matriculas");
@@ -134,24 +209,24 @@ public class MatriculaDao {
 		return listDadosParaDoacao;
 	}
 
-	public boolean doar(Doacao doacao) {
-
-		int size = this.getMatriculas().get("matriculas").size();
+	public boolean alterarMontante(Doacao doacao) {
+		Map<String, ArrayList<Matricula>> map = this.getMatriculas();
+		int size = map.get("matriculas").size();
 
 		for (int i = 0; i < size; i++) {
 
-			Matricula matricula = this.getMatriculas().get("matriculas").get(i);
+			Matricula matricula = map.get("matriculas").get(i);
 
 			if (matricula.getIdAluno().equals(doacao.getIdAluno())
 					&& matricula.getIdTurma().equals(doacao.getIdTurma())) {
 
 				final double novoMontanteDoacao = this.getMatriculas().get("matriculas").get(i).getMontanteDoacao()
 						+ doacao.getValor();
+				map.get("matriculas").get(i).setMontanteDoacao(novoMontanteDoacao);
+				;
 
-				this.getMatriculas().get("matriculas").get(i).setMontanteDoacao(novoMontanteDoacao);
+				this.persistir(map);
 
-				this.persistir(this.getMatriculas());
-				
 				return true;
 
 			}

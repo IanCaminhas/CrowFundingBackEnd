@@ -3,25 +3,23 @@ package br.com.crowfunding.dto;
 public class DoacaoDTO {
 
 	private Double valor;
-	private String dataDoacao;
 	private Integer idTurma;
 	private Integer idAluno;
 	private String nomeDoador;
-	private String nome;
 	private String agencia;
 	private String conta;
+	private String dataDoacao;
 
-	public DoacaoDTO(Double valor, String dataDoacao, Integer idTurma, Integer idAluno, String nomeDoador, String nome,
-			String agencia, String conta) {
+	public DoacaoDTO(Double valor, Integer idTurma, Integer idAluno, String nomeDoador,
+			String agencia, String conta,String dataDoacao) {
 
 		this.valor = valor;
-		this.dataDoacao = dataDoacao;
 		this.idTurma = idTurma;
 		this.idAluno = idAluno;
 		this.nomeDoador = nomeDoador;
-		this.nome = nome;
 		this.agencia = agencia;
 		this.conta = conta;
+		this.dataDoacao=dataDoacao;
 	}
 
 	public Double getValor() {
@@ -30,14 +28,6 @@ public class DoacaoDTO {
 
 	public void setValor(Double valor) {
 		this.valor = valor;
-	}
-
-	public String getDataDoacao() {
-		return dataDoacao;
-	}
-
-	public void setDataDoacao(String dataDoacao) {
-		this.dataDoacao = dataDoacao;
 	}
 
 	public Integer getIdTurma() {
@@ -64,14 +54,7 @@ public class DoacaoDTO {
 		this.nomeDoador = nomeDoador;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
+	
 	public String getAgencia() {
 		return agencia;
 	}
@@ -86,6 +69,14 @@ public class DoacaoDTO {
 
 	public void setConta(String conta) {
 		this.conta = conta;
+	}
+	
+	public String getDataDoacao() {
+		return dataDoacao;
+	}
+	
+	public void setDataDoacao(String dataDoacao) {
+		this.dataDoacao = dataDoacao;
 	}
 
 }

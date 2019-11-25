@@ -4,25 +4,28 @@ public class TurmaCursoInstituicaoDTO {
 
 	private Integer idTurma;
 	private String nomeCurso;
-	private String nomeInstituivao;
+	private String nomeInstituicao;
 	private Double valorCurso;
 	private String dataInicio;
 	private String dataConclusao;
 	private String horarioInicio;
 	private String horarioTermino;
 	private String endereco;
+	private String ementa;
 
-	public TurmaCursoInstituicaoDTO(Integer idTurma, String nomeCurso, String nomeInstituivao, Double valorCurso,
-			String dataInicio, String dataConclusao, String horarioInicio, String horarioTermino, String endereco) {
+	public TurmaCursoInstituicaoDTO(Integer idTurma, String nomeCurso, String nomeInstituicao, Double valorCurso,
+			String dataInicio, String dataConclusao, String horarioInicio, String horarioTermino, String endereco,
+			String ementa) {
 		this.idTurma = idTurma;
 		this.nomeCurso = nomeCurso;
-		this.nomeInstituivao = nomeInstituivao;
+		this.nomeInstituicao = nomeInstituicao;
 		this.valorCurso = valorCurso;
 		this.dataInicio = dataInicio;
 		this.dataConclusao = dataConclusao;
 		this.horarioInicio = horarioInicio;
 		this.horarioTermino = horarioTermino;
 		this.endereco = endereco;
+		this.ementa = ementa;
 	}
 
 	public Integer getIdTurma() {
@@ -42,11 +45,11 @@ public class TurmaCursoInstituicaoDTO {
 	}
 
 	public String getNomeInstituivao() {
-		return nomeInstituivao;
+		return nomeInstituicao;
 	}
 
-	public void setNomeInstituivao(String nomeInstituivao) {
-		this.nomeInstituivao = nomeInstituivao;
+	public void setNomeInstituivao(String nomeInstituicao) {
+		this.nomeInstituicao = nomeInstituicao;
 	}
 
 	public Double getValorCurso() {
@@ -95,6 +98,14 @@ public class TurmaCursoInstituicaoDTO {
 
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
+	}
+
+	public String getEmenta() {
+		return ementa;
+	}
+
+	public void setEmenta(String ementa) {
+		this.ementa = ementa;
 	}
 
 }

@@ -105,7 +105,7 @@ public class TurmaDao {
 
 			Turma turma = listTotalTurmas.get(i);
 
-			if (Data.stringParaDate(turma.getDataInicio()).before(Data.obterDataHoje())) {
+			if (Data.stringParaDate(turma.getDataInicio()).after(Data.obterDataHoje())) {
 
 				Curso curso = new CursoDao().getCurso(turma.getIdCurso());
 				Instituicao instituicao = new InstituicaoDao().getInstituicao(curso.getId());
@@ -113,8 +113,8 @@ public class TurmaDao {
 
 				TurmaCursoInstituicaoDTO turmaCursoInstituicaoDTO = new TurmaCursoInstituicaoDTO(turma.getId(),
 						curso.getNome(), instituicao.getNome(), curso.getValor(), turma.getDataInicio(),
-						turma.getHorarioTermino(), turma.getHorarioInicio(), turma.getHorarioTermino(),
-						endereco.toString());
+						turma.getPrevisaoTermino(), turma.getHorarioInicio(), turma.getHorarioTermino(),
+						endereco.toString(), curso.getEmenta());
 
 				listTurmasValidas.add(turmaCursoInstituicaoDTO);
 

@@ -2,8 +2,6 @@ package br.com.crowfunding.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Data {
@@ -25,14 +23,17 @@ public class Data {
 
 	public static Date obterDataHoje() {
 
-		Date dataDeHoje = null;
+		Date dataDeHoje = new Date();
 		try {
-			dataDeHoje = formato.parse(LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+			dataDeHoje = formato.parse(dataDeHoje.toString());
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 		return dataDeHoje;
 
 	}
+	
+	
+	
 
 }

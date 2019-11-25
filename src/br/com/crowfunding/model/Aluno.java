@@ -28,7 +28,7 @@ public class Aluno {
 	}
 	
 	public Aluno(String nome, String telefone, String email, String cpf,
-			String descricaoPerfil, Double rendaPerCapita, String senha,Integer idEndereco) {
+			String descricaoPerfil, Double rendaPerCapita, String senha,Integer idEndereco, String dataNascimento) {
 		this.nome = nome;
 		this.telefone = telefone;
 		this.email = email;
@@ -37,6 +37,7 @@ public class Aluno {
 		this.rendaPerCapita = rendaPerCapita;
 		this.senha = senha;
 		this.idEndereco=idEndereco;
+		this.dataNascimento = dataNascimento;
 	}
 
 	public Integer getId() {

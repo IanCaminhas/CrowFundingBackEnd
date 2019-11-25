@@ -8,20 +8,17 @@ public class Doacao {
 	private Integer idTurma;
 	private Integer idAluno;
 	private String nomeDoador;
-	private String nome;
 	private String agencia;
 	private String conta;
 
-	public Doacao(Integer id, Double valor, String dataDoacao, Integer idTurma, Integer idAluno, String nomeDoador,
-			String nome, String agencia, String conta) {
+	public Doacao(Double valor, String dataDoacao, Integer idTurma, Integer idAluno, String nomeDoador,
+			String agencia, String conta) {
 
-		this.id = id;
 		this.valor = valor;
 		this.dataDoacao = dataDoacao;
 		this.idTurma = idTurma;
 		this.idAluno = idAluno;
 		this.nomeDoador = nomeDoador;
-		this.nome = nome;
 		this.agencia = agencia;
 		this.conta = conta;
 	}
@@ -74,13 +71,7 @@ public class Doacao {
 		this.nomeDoador = nomeDoador;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+	
 
 	public String getAgencia() {
 		return agencia;

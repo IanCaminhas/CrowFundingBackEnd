@@ -5,16 +5,16 @@ public class DadosParaDoacaoDTO {
 	private String nomeAluno;
 	private String nomeCurso;
 	private Integer idAluno;
-	private String nomeInstiuicao;
+	private String nomeInstituicao;
 	private Integer idTurma;
 
-	public DadosParaDoacaoDTO(String nomeAluno, String nomeCurso, Integer idAluno, String nomeInstiuicao,
+	public DadosParaDoacaoDTO(String nomeAluno, String nomeCurso, Integer idAluno, String nomeInstituicao,
 			Integer idTurma) {
 
 		this.nomeAluno = nomeAluno;
 		this.nomeCurso = nomeCurso;
 		this.idAluno = idAluno;
-		this.nomeInstiuicao = nomeInstiuicao;
+		this.nomeInstituicao = nomeInstituicao;
 		this.idTurma = idTurma;
 	}
 
@@ -43,11 +43,11 @@ public class DadosParaDoacaoDTO {
 	}
 
 	public String getNomeInstiuicao() {
-		return nomeInstiuicao;
+		return nomeInstituicao;
 	}
 
-	public void setNomeInstiuicao(String nomeInstiuicao) {
-		this.nomeInstiuicao = nomeInstiuicao;
+	public void setNomeInstiuicao(String nomeInstituicao) {
+		this.nomeInstituicao = nomeInstituicao;
 	}
 
 	public Integer getIdTurma() {

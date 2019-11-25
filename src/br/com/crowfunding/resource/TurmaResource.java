@@ -39,6 +39,9 @@ public class TurmaResource {
 		return new GsonBuilder().setPrettyPrinting().create().fromJson(conteudo, TurmaDTO.class);
 	}
 
+	
+	//turmas disponíveis
+	
 	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("turmasDisponiveis")

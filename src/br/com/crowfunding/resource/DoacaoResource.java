@@ -1,6 +1,6 @@
 package br.com.crowfunding.resource;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -11,35 +11,52 @@ import javax.ws.rs.core.Response;
 
 import com.google.gson.GsonBuilder;
 
+import br.com.crowfunding.dao.DoacaoDao;
 import br.com.crowfunding.dao.MatriculaDao;
 import br.com.crowfunding.dto.DadosParaDoacaoDTO;
+import br.com.crowfunding.dto.DoacaoDTO;
+import br.com.crowfunding.model.Doacao;
 
-@Path("doacoes")
+@Path("doacao")
 public class DoacaoResource {
-
-	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("doar")
-	public Response doarParaAluno(String dadosDoacao) {
-
-		
-		
-		
-		
-		
-		return Response.status(201).build();
-
-	}
 
 	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("doacao/alunos")
-	public String dadosParaDoacao(String dadosDoacao) {
+	@Path("alunos")
+	public String turmasDisponiveis() {
+		ArrayList<DadosParaDoacaoDTO> dadosParaRealizarDoacao = new MatriculaDao().getDadosParaRealizarDoacao();
+		return new GsonBuilder().setPrettyPrinting().create().toJson(dadosParaRealizarDoacao);
+	}
+	
 
-		List<DadosParaDoacaoDTO> dadosParaDoacoes = new MatriculaDao().getDadosParaRealizarDoacao();
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("realizar_doacao")
+	public Response realizarDoacao(String dadosMatricula) {
+		DoacaoDTO doacaoDTO = this.obterDoacaoDTO(dadosMatricula);
+		
+		
+		Doacao doacao = new DoacaoDao().adiciona(new Doacao(doacaoDTO.getValor(), doacaoDTO.getDataDoacao(), doacaoDTO.getIdTurma(), doacaoDTO.getIdAluno(), doacaoDTO.getNomeDoador(), doacaoDTO.getAgencia(), doacaoDTO.getConta()));
+		
+		if(new MatriculaDao().alterarMontante(doacao)) {
+			return Response.status(201).build();
 
-		return new GsonBuilder().setPrettyPrinting().create().toJson(dadosParaDoacoes);
+		}
+		return Response.status(500).build();
 
 	}
+	
+	public DoacaoDTO obterDoacaoDTO(String dadosDoacao) {
+		return new GsonBuilder().setPrettyPrinting().create().fromJson(dadosDoacao, DoacaoDTO.class);
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

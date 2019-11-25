@@ -3,166 +3,22 @@
     {
       "id": 1,
       "nome": "Java",
-      "valor": 1000.0,
+      "valor": 12.0,
       "ementa": "POO",
       "idInstituicao": 1,
       "turmas": [
-        1,
-        2
+        1
       ]
     },
     {
       "id": 2,
-      "nome": "java",
-      "valor": 21.0,
-      "ementa": "POO",
-      "turmas": []
-    },
-    {
-      "id": 3,
-      "nome": "C#",
-      "valor": 1000.0,
-      "ementa": "POO 2",
-      "turmas": []
-    },
-    {
-      "id": 4,
-      "nome": "hoje tem empree",
-      "valor": 5656.0,
-      "ementa": "doid",
-      "turmas": []
-    },
-    {
-      "id": 5,
-      "nome": "doido demais",
-      "valor": 111.0,
-      "ementa": "e",
-      "turmas": []
-    },
-    {
-      "id": 6,
-      "nome": "w",
-      "valor": 1.0,
-      "ementa": "q",
-      "turmas": []
-    },
-    {
-      "id": 7,
-      "nome": "hoje",
-      "valor": 1212.0,
-      "ementa": "12dsfs",
-      "turmas": []
-    },
-    {
-      "id": 8,
-      "nome": "hui",
-      "valor": 12.0,
-      "ementa": "sdd",
-      "turmas": []
-    },
-    {
-      "id": 9,
-      "nome": "Teste",
-      "valor": 1212.0,
-      "ementa": "sddsf",
-      "turmas": []
-    },
-    {
-      "id": 10,
-      "nome": "Qualidade",
-      "valor": 1212.0,
-      "ementa": "dfsdf",
-      "idInstituicao": 35,
-      "turmas": [
-        3,
-        8,
-        9
-      ]
-    },
-    {
-      "id": 11,
-      "nome": "Jogar bola",
-      "valor": 111.0,
-      "ementa": "Pele",
-      "idInstituicao": 35,
-      "turmas": [
-        4,
-        5,
-        6,
-        7
-      ]
-    },
-    {
-      "id": 12,
-      "nome": "Teste de software",
-      "valor": 12.0,
-      "ementa": "asda",
-      "idInstituicao": 37,
-      "turmas": []
-    },
-    {
-      "id": 13,
-      "nome": "Cruzeiro",
-      "valor": 11.0,
-      "ementa": "história do cabuloso",
-      "idInstituicao": 38,
-      "turmas": []
-    },
-    {
-      "id": 14,
-      "nome": "brasileirão",
-      "valor": 1212.0,
-      "ementa": "sddsf",
-      "idInstituicao": 38,
-      "turmas": []
-    },
-    {
-      "id": 15,
-      "nome": "TIC",
-      "valor": 1212.0,
-      "ementa": "dad",
-      "turmas": []
-    },
-    {
-      "id": 16,
-      "nome": "Processos",
-      "valor": 334.0,
-      "ementa": "ddf",
-      "turmas": []
-    },
-    {
-      "id": 17,
-      "nome": "TIS VI",
-      "valor": 233.0,
-      "ementa": "sdsdf",
-      "idInstituicao": 6,
-      "turmas": []
-    },
-    {
-      "id": 18,
-      "nome": "Modular",
-      "valor": 1000.0,
-      "ementa": "POO",
-      "idInstituicao": 40,
-      "turmas": [
-        10
-      ]
-    },
-    {
-      "id": 19,
-      "nome": "falar asneira",
-      "valor": 33.0,
-      "ementa": "falar bosta",
-      "idInstituicao": 41,
-      "turmas": []
-    },
-    {
-      "id": 20,
-      "nome": "java",
+      "nome": "Capoeira",
       "valor": 12.0,
       "ementa": "poo",
-      "idInstituicao": 41,
-      "turmas": []
+      "idInstituicao": 2,
+      "turmas": [
+        2
+      ]
     }
   ]
 }
