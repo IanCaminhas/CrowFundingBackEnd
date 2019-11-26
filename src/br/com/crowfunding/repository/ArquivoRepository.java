@@ -35,14 +35,6 @@ public class ArquivoRepository {
 
 	}
 	
-	public void alterarJson(String json) throws IOException {
-
-		arquivoRepository = new BufferedWriter(new FileWriter(Arquivo.getNomeArquivo(arquivo), false));
-		this.arquivoRepository.write(json);
-		this.arquivoRepository.close();
-
-	}
-	
 
 	public BufferedReader recuperarJson() throws IOException {
 

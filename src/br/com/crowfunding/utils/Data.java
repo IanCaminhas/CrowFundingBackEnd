@@ -24,12 +24,9 @@ public class Data {
 	public static Date obterDataHoje() {
 
 		Date dataDeHoje = new Date();
-		try {
-			dataDeHoje = formato.parse(dataDeHoje.toString());
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		return dataDeHoje;
+		String dataAtual = dataDeHoje.getDay()+"/"+dataDeHoje.getMonth()+"/"+dataDeHoje.getYear();
+	
+		return stringParaDate(dataAtual);
 
 	}
 	

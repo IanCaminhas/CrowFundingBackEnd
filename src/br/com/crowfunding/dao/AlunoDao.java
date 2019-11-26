@@ -23,6 +23,23 @@ public class AlunoDao {
 	public AlunoDao() {
 		this.repository = new ArquivoRepository(Arquivo.ALUNO);
 	}
+	
+	public boolean verifcaEmailExistente(String email) {
+		ArrayList<Aluno> arrayList = this.getAlunos().get("alunos");
+		
+		for (int i = 0; i < arrayList.size(); i++) {
+			if(arrayList.get(i).getEmail().equals(email)) {
+				return true;
+			}
+		}
+		
+		
+		return false;
+		
+		
+	}
+	
+	
 
 	public Aluno adiciona(Aluno aluno) {
 

@@ -36,7 +36,7 @@ public class CursoResource {
 
 	}
 
-	@Path("/{idInstituicao}")
+	@Path("cursos_instituicao/{idInstituicao}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getCursos(@PathParam("idInstituicao") Integer id) {

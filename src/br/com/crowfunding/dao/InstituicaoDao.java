@@ -24,6 +24,22 @@ public class InstituicaoDao {
 		this.repository = new ArquivoRepository(Arquivo.INSTITUICAO);
 	}
 
+	public boolean verifcaEmailExistente(String email) {
+		ArrayList<Instituicao> arrayList = this.getInstituicaos().get("instituicoes");
+		
+		for (int i = 0; i < arrayList.size(); i++) {
+			if(arrayList.get(i).getEmail().equals(email)) {
+				return true;
+			}
+		}
+		
+		
+		return false;
+		
+		
+	}
+	
+	
 	public Instituicao adiciona(Instituicao instituicao) {
 
 		Map<String, ArrayList<Instituicao>> matriculasMap = this.getInstituicaos();

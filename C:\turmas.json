@@ -11,12 +11,12 @@
     },
     {
       "id": 2,
-      "numeroVagas": 12,
-      "horarioInicio": "",
-      "horarioTermino": "14:00",
-      "dataInicio": "4/2/2020",
-      "previsaoTermino": "14:00",
-      "idCurso": 2
+      "numeroVagas": 89,
+      "horarioInicio": "13:09",
+      "horarioTermino": "15:23",
+      "dataInicio": "1/1/2020",
+      "previsaoTermino": "23/1/2020",
+      "idCurso": 3
     }
   ]
 }

@@ -111,11 +111,6 @@ public class MatriculaDao {
 		return listMatriculasDoAluno;
 	}
 	
-	
-	
-	
-	
-	
 
 	public Map<String, ArrayList<Matricula>> getMatriculas() {
 
@@ -146,9 +141,8 @@ public class MatriculaDao {
 		for (int i = 0; i < size; i++) {
 			Matricula matricula = map.get("matriculas").get(i);
 			if (matricula.getIdAluno().equals(idAluno) && matricula.getIdTurma().equals(idTurma)) {
-
 				map.get("matriculas").get(i)
-						.setEstadoMatricula(EstadoMatricula.getCodEstadoMatricula(EstadoMatricula.APROVADO));
+						.setEstadoMatricula(EstadoMatricula.getCodEstadoMatricula(EstadoMatricula.APROVADO));				
 				this.persistir(map);
 
 				return;
@@ -199,7 +193,7 @@ public class MatriculaDao {
 				Aluno aluno = new AlunoDao().getAluno(matricula.getIdAluno());
 
 				DadosParaDoacaoDTO dadosParaDoacaoDTO = new DadosParaDoacaoDTO(aluno.getNome(), curso.getNome(),
-						aluno.getId(), instituicao.getNome(), turma.getId());
+						aluno.getId(), instituicao.getNome(), turma.getId(), curso.getValor(), matricula.getMontanteDoacao());
 				listDadosParaDoacao.add(dadosParaDoacaoDTO);
 
 			}
