@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nome": "Java",
-      "valor": 12.0,
+      "valor": 123.0,
       "ementa": "POO",
       "idInstituicao": 1,
       "turmas": [
@@ -12,75 +12,10 @@
     },
     {
       "id": 2,
-      "nome": "Capoeira",
-      "valor": 12.0,
-      "ementa": "poo",
-      "idInstituicao": 2,
-      "turmas": [
-        2
-      ]
-    },
-    {
-      "id": 3,
-      "nome": "lavajato",
-      "valor": 1212.0,
-      "ementa": "curso top",
-      "idInstituicao": 3,
-      "turmas": [
-        3,
-        3,
-        3,
-        3,
-        3,
-        2
-      ]
-    },
-    {
-      "id": 4,
-      "nome": "100",
-      "valor": 12.0,
-      "ementa": "dds",
-      "idInstituicao": 3,
-      "turmas": []
-    },
-    {
-      "id": 5,
-      "nome": "Pereba",
-      "valor": 1212.0,
-      "ementa": "galo da massa",
-      "idInstituicao": 4,
-      "turmas": []
-    },
-    {
-      "id": 6,
-      "nome": "segunda divisão",
-      "valor": 12.0,
-      "ementa": "segundona",
-      "idInstituicao": 4,
-      "turmas": []
-    },
-    {
-      "id": 7,
-      "nome": "perebão",
-      "valor": 12.0,
-      "ementa": "qw",
-      "idInstituicao": 4,
-      "turmas": []
-    },
-    {
-      "id": 8,
-      "nome": "6x1",
-      "valor": 123.0,
-      "ementa": "dsdf",
-      "idInstituicao": 4,
-      "turmas": []
-    },
-    {
-      "id": 9,
-      "nome": "5x0",
-      "valor": 12.0,
-      "ementa": "sd",
-      "idInstituicao": 4,
+      "nome": "C#",
+      "valor": 545.0,
+      "ementa": "oi tudo bom !?",
+      "idInstituicao": 1,
       "turmas": []
     }
   ]

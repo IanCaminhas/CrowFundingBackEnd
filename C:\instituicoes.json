@@ -2,71 +2,19 @@
   "instituicoes": [
     {
       "id": 1,
-      "nome": "PUC MG",
-      "cnpj": "121213",
-      "telefone": "34324324",
-      "email": "caminhasian@gmail.com",
-      "responsavel": "Zezé Perrela",
-      "descricao": "TI",
-      "conta": "1212",
-      "agencia": "334",
+      "nome": "PUC",
+      "cnpj": "23234",
+      "telefone": "234",
+      "email": "puc@gmail.com",
+      "responsavel": "",
+      "descricao": "sdjkf",
+      "conta": "34",
+      "agencia": "34",
       "senha": "123",
       "idEndereco": 1,
       "cursos": [
-        1
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "Casa Caminhas",
-      "cnpj": "234343423434234",
-      "telefone": "343432",
-      "email": "casa@gmail.com",
-      "responsavel": "Zezé Perrela",
-      "descricao": "sdfsdf",
-      "conta": "132133",
-      "agencia": "34534d435",
-      "senha": "123",
-      "idEndereco": 7,
-      "cursos": [
+        1,
         2
-      ]
-    },
-    {
-      "id": 3,
-      "nome": "UFMG",
-      "cnpj": "123123123",
-      "telefone": "123123132",
-      "email": "ufmg@gmail.com",
-      "responsavel": "Rian",
-      "descricao": "asd",
-      "conta": "123123",
-      "agencia": "1233",
-      "senha": "123",
-      "idEndereco": 14,
-      "cursos": [
-        3,
-        4
-      ]
-    },
-    {
-      "id": 4,
-      "nome": "galo",
-      "cnpj": "123",
-      "telefone": "12312313",
-      "email": "galo@gmail.com",
-      "responsavel": "sd",
-      "descricao": "sd",
-      "conta": "12313",
-      "agencia": "123",
-      "senha": "123",
-      "idEndereco": 15,
-      "cursos": [
-        5,
-        6,
-        7,
-        8,
-        9
       ]
     }
   ]

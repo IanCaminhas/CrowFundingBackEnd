@@ -25,12 +25,6 @@ public class AlunoResource {
 	public Response adiciona(String dadosAluno) {
 		AlunoDTO alunoDTO = this.fromDTO(dadosAluno);
 		
-		if(new AlunoDao().verifcaEmailExistente(alunoDTO.getEmail())) {
-			return Response.status(404).build();
-		}
-
-		
-		
 		Endereco endereco = new EnderecoDao().adiciona(alunoDTO.getRua(), alunoDTO.getBairro(),
 				alunoDTO.getNumeroPropriedade(), alunoDTO.getComplemento(), alunoDTO.getLogradouro());
 

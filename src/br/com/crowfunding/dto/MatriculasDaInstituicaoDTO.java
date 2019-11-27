@@ -15,7 +15,8 @@ public class MatriculasDaInstituicaoDTO {
 	private Double rendaPerCapita;
 	private String descricaoPerfil;
 	private String ementa;
-
+	private String endereco;
+	
 	public MatriculasDaInstituicaoDTO(String nomeAluno, String nomeCurso, String horaInicio, String horaTermino,
 			String dataInicio, String dataTermino, String status, Integer idAluno, Integer idTurma,
 			String enderecoAluno, Double rendaPerCapita, String descricaoPerfil, String ementa) {
@@ -137,6 +138,14 @@ public class MatriculasDaInstituicaoDTO {
 
 	public void setEmenta(String ementa) {
 		this.ementa = ementa;
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+	
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 }

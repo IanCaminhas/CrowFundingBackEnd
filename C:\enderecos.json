@@ -2,119 +2,15 @@
   "enderecos": [
     {
       "id": 1,
-      "rua": "wewer",
+      "rua": "jskdf",
       "bairro": "sdf",
-      "numeroPropriedade": 2,
+      "numeroPropriedade": 123,
       "complemento": "sdf",
       "logradouro": "sdf"
     },
     {
       "id": 2,
-      "rua": "wd",
-      "bairro": "sdf",
-      "numeroPropriedade": 12,
-      "complemento": "sdf",
-      "logradouro": "sdf"
-    },
-    {
-      "id": 3,
-      "rua": "sdhfj",
-      "bairro": "sdf",
-      "numeroPropriedade": 34,
-      "complemento": "sdf",
-      "logradouro": "sdf"
-    },
-    {
-      "id": 4,
-      "rua": "sdf",
-      "bairro": "sdf",
-      "numeroPropriedade": 34,
-      "complemento": "sdf",
-      "logradouro": "sdf"
-    },
-    {
-      "id": 5,
-      "rua": "gvh",
-      "bairro": "hj",
-      "numeroPropriedade": 7,
-      "complemento": "gh",
-      "logradouro": "hj"
-    },
-    {
-      "id": 6,
-      "rua": "sd",
-      "bairro": "sdf",
-      "numeroPropriedade": 345,
-      "complemento": "jk",
-      "logradouro": "jk"
-    },
-    {
-      "id": 7,
-      "rua": "sdf",
-      "bairro": "sdf",
-      "numeroPropriedade": 12,
-      "complemento": "sdf",
-      "logradouro": "sdf"
-    },
-    {
-      "id": 8,
-      "rua": "sdf",
-      "bairro": "sdf",
-      "numeroPropriedade": 234,
-      "complemento": "sdf",
-      "logradouro": "sf"
-    },
-    {
-      "id": 9,
-      "rua": "sdf",
-      "bairro": "sdf",
-      "numeroPropriedade": 234,
-      "complemento": "sdf",
-      "logradouro": "sf"
-    },
-    {
-      "id": 10,
-      "rua": "sdf",
-      "bairro": "sdf",
-      "numeroPropriedade": 34,
-      "complemento": "sdf",
-      "logradouro": "sdf"
-    },
-    {
-      "id": 11,
-      "rua": "sdf",
-      "bairro": "sdf",
-      "numeroPropriedade": 23,
-      "complemento": "sdf",
-      "logradouro": "sdf"
-    },
-    {
-      "id": 12,
-      "rua": "sdf",
-      "bairro": "sfd",
-      "numeroPropriedade": 12,
-      "complemento": "sdf",
-      "logradouro": "sdf"
-    },
-    {
-      "id": 13,
-      "rua": "sd",
-      "bairro": "sdf",
-      "numeroPropriedade": 34,
-      "complemento": "sdf",
-      "logradouro": "sdf"
-    },
-    {
-      "id": 14,
-      "rua": "sd nm",
-      "bairro": "sndmf",
-      "numeroPropriedade": 234,
-      "complemento": "sdf",
-      "logradouro": "sfd"
-    },
-    {
-      "id": 15,
-      "rua": "sda",
+      "rua": "asd",
       "bairro": "sdf",
       "numeroPropriedade": 23,
       "complemento": "sdf",

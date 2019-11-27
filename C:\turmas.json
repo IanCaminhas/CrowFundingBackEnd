@@ -2,21 +2,12 @@
   "turmas": [
     {
       "id": 1,
-      "numeroVagas": 15,
-      "horarioInicio": "19:09",
-      "horarioTermino": "20:40",
-      "dataInicio": "12/12/2019",
-      "previsaoTermino": "21/12/2019",
+      "numeroVagas": 20,
+      "horarioInicio": "13:00",
+      "horarioTermino": "15:00",
+      "dataInicio": "7/1/2020",
+      "previsaoTermino": "22/1/2020",
       "idCurso": 1
-    },
-    {
-      "id": 2,
-      "numeroVagas": 89,
-      "horarioInicio": "13:09",
-      "horarioTermino": "15:23",
-      "dataInicio": "1/1/2020",
-      "previsaoTermino": "23/1/2020",
-      "idCurso": 3
     }
   ]
 }

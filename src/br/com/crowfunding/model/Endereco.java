@@ -67,8 +67,8 @@ public class Endereco {
 
 	@Override
 	public String toString() {
-		return "rua:" + rua + ", bairro:" + bairro + ", numeroPropriedade:" + numeroPropriedade + ", complemento:"
-				+ complemento + ", logradouro:" + logradouro + "";
+		return "rua: " + rua + ", bairro: " + bairro + ", numeroPropriedade: " + numeroPropriedade + ", complemento: "
+				+ complemento + ", logradouro: " + logradouro;
 	}
 
 }

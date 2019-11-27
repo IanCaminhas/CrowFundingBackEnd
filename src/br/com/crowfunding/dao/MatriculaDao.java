@@ -80,6 +80,7 @@ public class MatriculaDao {
 						EstadoMatricula.getDescricaoEstadoMatricula(matricula.getEstadoMatricula()), aluno.getId(),
 						turma.getId(), enderecoAluno.toString(), aluno.getRendaPerCapita(), aluno.getDescricaoPerfil(),
 						curso.getEmenta());
+				alunoParaAnaliseDTO.setEndereco(enderecoAluno.toString());
 				listAlunos.add(alunoParaAnaliseDTO);
 			}
 

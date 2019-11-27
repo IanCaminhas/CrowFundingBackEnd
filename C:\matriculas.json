@@ -1,25 +1,11 @@
 {
   "matriculas": [
     {
-      "montanteDoacao": 1.2222224E7,
+      "montanteDoacao": 64.0,
       "estadoMatricula": 2,
-      "dataMatricula": "Sat Nov 23 11:44:55 BRST 2019",
+      "dataMatricula": "Sun Oct 02 00:00:00 BRT 119",
       "idTurma": 1,
       "idAluno": 1
-    },
-    {
-      "montanteDoacao": 0.0,
-      "estadoMatricula": 1,
-      "dataMatricula": "Sun Nov 24 17:56:08 BRST 2019",
-      "idTurma": 2,
-      "idAluno": 3
-    },
-    {
-      "montanteDoacao": 25,
-      "estadoMatricula": 2,
-      "dataMatricula": "Mon Nov 25 23:41:13 BRST 2019",
-      "idTurma": 2,
-      "idAluno": 7
     }
   ]
 }

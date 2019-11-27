@@ -2,133 +2,33 @@
   "doacoes": [
     {
       "id": 1,
-      "valor": 12.0,
-      "dataDoacao": "24/11/2019",
+      "valor": 4.0,
+      "dataDoacao": "26/11/2019",
       "idTurma": 1,
       "idAluno": 1,
       "nomeDoador": "Ian",
-      "agencia": "23",
-      "conta": "112323"
+      "agencia": "111",
+      "conta": "111"
     },
     {
       "id": 2,
-      "valor": 113.0,
-      "dataDoacao": "24/11/2019",
+      "valor": 30.0,
+      "dataDoacao": "26/11/2019",
       "idTurma": 1,
       "idAluno": 1,
-      "nomeDoador": "Tevez",
-      "agencia": "234",
-      "conta": "23434"
+      "nomeDoador": "o",
+      "agencia": "7",
+      "conta": "7"
     },
     {
       "id": 3,
-      "valor": 234.0,
-      "dataDoacao": "24/11/2019",
+      "valor": 30.0,
+      "dataDoacao": "26/11/2019",
       "idTurma": 1,
       "idAluno": 1,
-      "nomeDoador": "ui",
-      "agencia": "23",
-      "conta": "23"
-    },
-    {
-      "id": 4,
-      "valor": 33.0,
-      "dataDoacao": "24/11/2019",
-      "idTurma": 1,
-      "idAluno": 1,
-      "nomeDoador": "qq",
-      "agencia": "2",
-      "conta": "12"
-    },
-    {
-      "id": 5,
-      "valor": 12.0,
-      "dataDoacao": "24/11/2019",
-      "idTurma": 1,
-      "idAluno": 1,
-      "nomeDoador": "8ui",
-      "agencia": "34",
-      "conta": "324"
-    },
-    {
-      "id": 6,
-      "valor": 2.0,
-      "dataDoacao": "24/11/2019",
-      "idTurma": 1,
-      "idAluno": 1,
-      "nomeDoador": "iu",
-      "agencia": "34",
-      "conta": "23"
-    },
-    {
-      "id": 7,
-      "valor": 1.2222222E7,
-      "dataDoacao": "24/11/2019",
-      "idTurma": 1,
-      "idAluno": 1,
-      "nomeDoador": "Heleno Caminhas",
-      "agencia": "32243",
-      "conta": "234"
-    },
-    {
-      "id": 8,
-      "valor": 234.0,
-      "dataDoacao": "24/11/2019",
-      "idTurma": 2,
-      "idAluno": 7,
-      "nomeDoador": "Heleno Caminhas",
-      "agencia": "234",
-      "conta": "234"
-    },
-    {
-      "id": 9,
-      "valor": 1000.0,
-      "dataDoacao": "24/11/2019",
-      "idTurma": 2,
-      "idAluno": 7,
-      "nomeDoador": "Itinga",
-      "agencia": "3",
-      "conta": "12"
-    },
-    {
-      "id": 10,
-      "valor": 78.0,
-      "dataDoacao": "24/11/2019",
-      "idTurma": 2,
-      "idAluno": 7,
-      "nomeDoador": "yu",
-      "agencia": "78",
-      "conta": "67"
-    },
-    {
-      "id": 11,
-      "valor": 10000.0,
-      "dataDoacao": "24/11/2019",
-      "idTurma": 2,
-      "idAluno": 7,
-      "nomeDoador": "sd",
-      "agencia": "45",
-      "conta": "344"
-    },
-    {
-      "id": 12,
-      "valor": 12.0,
-      "dataDoacao": "25/11/2019",
-      "idTurma": 2,
-      "idAluno": 7,
-      "nomeDoador": "q",
+      "nomeDoador": "io",
       "agencia": "12",
       "conta": "12"
-    },
-    {
-      "id": 13,
-      "valor": 13.0,
-      "dataDoacao": "25/11/2019",
-      "idTurma": 2,
-      "idAluno": 7,
-      "nomeDoador": "ere",
-      "agencia": "123",
-      "conta": "234"
     }
   ]
 }

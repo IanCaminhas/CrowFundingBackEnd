@@ -24,11 +24,7 @@ public class InstituicaoResource {
 	@Path("cadastrar")
 	public Response cadastrarInstituicao(String dadosInstituicao) {
 		InstituicaoDTO instituicaoDTO = this.dtoParaInstituicao(dadosInstituicao);
-		
-		if(new InstituicaoDao().verifcaEmailExistente(instituicaoDTO.getEmail())) {
-			return Response.status(404).build();
-		}
-		
+			
 		Endereco endereco = new EnderecoDao().adiciona(instituicaoDTO.getRua(), instituicaoDTO.getBairro(),
 				instituicaoDTO.getNumeroPropriedade(), instituicaoDTO.getComplemento(), instituicaoDTO.getLogradouro());
 

@@ -2,87 +2,15 @@
   "alunos": [
     {
       "id": 1,
-      "nome": "Pedro",
-      "telefone": "rwwr",
-      "email": "p@gmail.com",
-      "dataNascimento": "NaN/NaN/NaN",
-      "cpf": "324324",
-      "descricaoPerfil": "pp",
-      "rendaPerCapita": 12.0,
-      "senha": "123",
-      "idEndereco": 5
-    },
-    {
-      "id": 2,
-      "nome": "Ian pereira caminhas",
-      "telefone": "34345",
-      "email": "caminhasian@gmail.com",
-      "dataNascimento": "3/3/1994",
-      "cpf": "12323",
-      "descricaoPerfil": "df",
-      "rendaPerCapita": 23.0,
-      "senha": "123",
-      "idEndereco": 8
-    },
-    {
-      "id": 3,
-      "nome": "Ria",
-      "telefone": "34",
-      "email": "r@gmail.com",
-      "dataNascimento": "4/2/1994",
-      "cpf": "342344",
-      "descricaoPerfil": "sdf",
-      "rendaPerCapita": 13.0,
-      "senha": "123",
-      "idEndereco": 9
-    },
-    {
-      "id": 4,
-      "nome": "João",
-      "telefone": "34",
-      "email": "j@gmail.com",
-      "dataNascimento": "4/2/1994",
-      "cpf": "123",
-      "descricaoPerfil": "dfsdf",
-      "rendaPerCapita": 100.0,
-      "senha": "123",
-      "idEndereco": 10
-    },
-    {
-      "id": 5,
-      "nome": "Cristiano",
-      "telefone": "345",
-      "email": "cr@gmail.com",
-      "dataNascimento": "NaN/NaN/NaN",
-      "cpf": "1233",
-      "descricaoPerfil": "xv",
-      "rendaPerCapita": 12.0,
-      "senha": "123",
-      "idEndereco": 11
-    },
-    {
-      "id": 6,
-      "nome": "hoje",
-      "telefone": "5",
-      "email": "h@gmail.com",
-      "dataNascimento": "5/2/1994",
-      "cpf": "78",
-      "descricaoPerfil": "esf",
-      "rendaPerCapita": 23.0,
-      "senha": "123",
-      "idEndereco": 12
-    },
-    {
-      "id": 7,
-      "nome": "Tuca",
-      "telefone": "4",
-      "email": "tu@gmail.com",
-      "dataNascimento": "4/2/1994",
-      "cpf": "32",
+      "nome": "Márcio",
+      "telefone": "123",
+      "email": "m@gmail.com",
+      "dataNascimento": "5/2/2003",
+      "cpf": "234",
       "descricaoPerfil": "asd",
       "rendaPerCapita": 12.0,
       "senha": "123",
-      "idEndereco": 13
+      "idEndereco": 2
     }
   ]
 }
