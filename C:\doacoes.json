@@ -2,33 +2,13 @@
   "doacoes": [
     {
       "id": 1,
-      "valor": 4.0,
-      "dataDoacao": "26/11/2019",
-      "idTurma": 1,
+      "valor": 12.0,
+      "dataDoacao": "29/11/2019",
+      "idTurma": 2,
       "idAluno": 1,
-      "nomeDoador": "Ian",
-      "agencia": "111",
-      "conta": "111"
-    },
-    {
-      "id": 2,
-      "valor": 30.0,
-      "dataDoacao": "26/11/2019",
-      "idTurma": 1,
-      "idAluno": 1,
-      "nomeDoador": "o",
-      "agencia": "7",
-      "conta": "7"
-    },
-    {
-      "id": 3,
-      "valor": 30.0,
-      "dataDoacao": "26/11/2019",
-      "idTurma": 1,
-      "idAluno": 1,
-      "nomeDoador": "io",
-      "agencia": "12",
-      "conta": "12"
+      "nomeDoador": "Ronaldo Nazário",
+      "agencia": "56789",
+      "conta": "1234"
     }
   ]
 }

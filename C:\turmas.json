@@ -2,11 +2,20 @@
   "turmas": [
     {
       "id": 1,
-      "numeroVagas": 20,
+      "numeroVagas": 30,
       "horarioInicio": "13:00",
       "horarioTermino": "15:00",
-      "dataInicio": "7/1/2020",
-      "previsaoTermino": "22/1/2020",
+      "dataInicio": "1/1/2020",
+      "previsaoTermino": "16/1/2020",
+      "idCurso": 1
+    },
+    {
+      "id": 2,
+      "numeroVagas": 100,
+      "horarioInicio": "12:00",
+      "horarioTermino": "13:00",
+      "dataInicio": "1/1/2020",
+      "previsaoTermino": "14/1/2020",
       "idCurso": 1
     }
   ]

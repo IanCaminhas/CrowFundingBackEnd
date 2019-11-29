@@ -128,12 +128,12 @@ public class TurmaDao {
 
 		ArrayList<Turma> listTotalTurmas = this.getTurmas().get("turmas");
 		ArrayList<TurmaDTO> listTurmasDaInstituicao = new ArrayList<TurmaDTO>();
-
-		for (int i = 0; i < listTurmasDaInstituicao.size(); i++) {
+		
+		
+		for (int i = 0; i < listTotalTurmas.size(); i++) {
 			Turma turma = listTotalTurmas.get(i);
 			Curso curso = new CursoDao().getCurso(turma.getIdCurso());
 			Instituicao instituicao = new InstituicaoDao().getInstituicao(curso.getId());
-			
 			if(instituicao.getId().equals(idInstituicao)) {
 				
 				TurmaDTO turmaDTO = new TurmaDTO(turma.getNumeroVagas(), turma.getHorarioInicio(), turma.getHorarioTermino(), turma.getDataInicio(), turma.getPrevisaoTermino(), curso.getId());

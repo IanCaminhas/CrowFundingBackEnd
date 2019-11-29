@@ -2,19 +2,20 @@
   "cursos": [
     {
       "id": 1,
-      "nome": "Java",
-      "valor": 123.0,
+      "nome": "java",
+      "valor": 1200.0,
       "ementa": "POO",
       "idInstituicao": 1,
       "turmas": [
-        1
+        1,
+        2
       ]
     },
     {
       "id": 2,
       "nome": "C#",
-      "valor": 545.0,
-      "ementa": "oi tudo bom !?",
+      "valor": 12.0,
+      "ementa": "poo",
       "idInstituicao": 1,
       "turmas": []
     }

@@ -2,19 +2,43 @@
   "enderecos": [
     {
       "id": 1,
-      "rua": "jskdf",
+      "rua": "sdf",
       "bairro": "sdf",
-      "numeroPropriedade": 123,
+      "numeroPropriedade": 23,
       "complemento": "sdf",
       "logradouro": "sdf"
     },
     {
       "id": 2,
       "rua": "asd",
-      "bairro": "sdf",
-      "numeroPropriedade": 23,
-      "complemento": "sdf",
+      "bairro": "as",
+      "numeroPropriedade": 123,
+      "complemento": "sd",
       "logradouro": "sdf"
+    },
+    {
+      "id": 3,
+      "rua": "Rua dos xmen",
+      "bairro": "Charles Xavier",
+      "numeroPropriedade": 2433,
+      "complemento": "perto da mansão",
+      "logradouro": "Marvel"
+    },
+    {
+      "id": 4,
+      "rua": "rua x",
+      "bairro": "bairro y",
+      "numeroPropriedade": 90,
+      "complemento": "perto Butiquin",
+      "logradouro": "logradouro z"
+    },
+    {
+      "id": 5,
+      "rua": "PSG",
+      "bairro": "Paris",
+      "numeroPropriedade": 10,
+      "complemento": "perto da torre Eiffel",
+      "logradouro": "parque dos principes"
     }
   ]
 }

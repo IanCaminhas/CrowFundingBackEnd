@@ -4,7 +4,7 @@ public enum EstadoMatricula {
 
 	EMANALISE(1, "Em análise pela instituição"), APROVADO(2, "Matricula aprovada pela instituição"),
 	REPROVADO(3, "Matricula reprovada pela instituição"), FINALIZADO(4, "Curso realizado"),
-	EMCURSO(5, " Curso em andamento");
+	EMCURSO(5, "Curso em andamento");
 
 	private Integer estado;
 	private String situacao;

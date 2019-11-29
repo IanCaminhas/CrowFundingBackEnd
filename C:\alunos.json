@@ -2,15 +2,51 @@
   "alunos": [
     {
       "id": 1,
-      "nome": "Márcio",
-      "telefone": "123",
-      "email": "m@gmail.com",
-      "dataNascimento": "5/2/2003",
-      "cpf": "234",
-      "descricaoPerfil": "asd",
-      "rendaPerCapita": 12.0,
+      "nome": "Ian pereira caminhas",
+      "telefone": "23",
+      "email": "sd@gmailcom",
+      "dataNascimento": "9/1/1996",
+      "cpf": "12",
+      "descricaoPerfil": "pouc conversa",
+      "rendaPerCapita": 23.0,
       "senha": "123",
       "idEndereco": 2
+    },
+    {
+      "id": 2,
+      "nome": "Cristiano Ronaldo de Souza",
+      "telefone": "(3197891234",
+      "email": "cr7@gmail.com",
+      "dataNascimento": "5/7/1995",
+      "cpf": "112345678912",
+      "descricaoPerfil": "Quero aprender a jogar Lol",
+      "rendaPerCapita": 600.0,
+      "senha": "123",
+      "idEndereco": 3
+    },
+    {
+      "id": 3,
+      "nome": "Tadeu Faria",
+      "telefone": "(31)87654332",
+      "email": "t@gmail.com",
+      "dataNascimento": "16/7/1997",
+      "cpf": "123457897711",
+      "descricaoPerfil": "Aprender a programar",
+      "rendaPerCapita": 3000.0,
+      "senha": "123",
+      "idEndereco": 4
+    },
+    {
+      "id": 4,
+      "nome": "Neymar Jr",
+      "telefone": "(31)87654332",
+      "email": "neymar@hotmail.com",
+      "dataNascimento": "4/7/2000",
+      "cpf": "078561236",
+      "descricaoPerfil": "aprender sempre",
+      "rendaPerCapita": 30000.0,
+      "senha": "123",
+      "idEndereco": 5
     }
   ]
 }

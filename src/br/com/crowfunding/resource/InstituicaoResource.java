@@ -13,8 +13,10 @@ import br.com.crowfunding.dao.EnderecoDao;
 import br.com.crowfunding.dao.InstituicaoDao;
 import br.com.crowfunding.dto.InstituicaoDTO;
 import br.com.crowfunding.dto.UsuarioDTO;
+import br.com.crowfunding.enums.Arquivo;
 import br.com.crowfunding.model.Endereco;
 import br.com.crowfunding.model.Instituicao;
+import br.com.crowfunding.repository.ArquivoRepository;
 
 @Path("instituicoes")
 public class InstituicaoResource {
@@ -23,8 +25,16 @@ public class InstituicaoResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("cadastrar")
 	public Response cadastrarInstituicao(String dadosInstituicao) {
+		
 		InstituicaoDTO instituicaoDTO = this.dtoParaInstituicao(dadosInstituicao);
-			
+		
+		if(!new ArquivoRepository(Arquivo.INSTITUICAO).isArquivoVazio()) {
+			if (new InstituicaoDao().verifcaEmailExistente(instituicaoDTO.getEmail())) {
+				return Response.status(404).build();
+			}
+		}
+		
+		
 		Endereco endereco = new EnderecoDao().adiciona(instituicaoDTO.getRua(), instituicaoDTO.getBairro(),
 				instituicaoDTO.getNumeroPropriedade(), instituicaoDTO.getComplemento(), instituicaoDTO.getLogradouro());
 
